@@ -5,6 +5,7 @@
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+  
 }
 
 a,
@@ -14,6 +15,8 @@ a,
   transition: 0.4s;
   padding: 3px;
 }
+
+
 
 @media (hover: hover) {
   a:hover {

@@ -1,5 +1,5 @@
 <template>
     <div>
-       hhhhhhh
+        This is Index page
     </div>
 </template>
