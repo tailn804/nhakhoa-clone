@@ -10,24 +10,27 @@
             <div class="flex flex-row gap-3 items-center mr-3 ">
                 <ul class="flex gap-5 list-none">
                     <li>
-                      <router-link to="/gioi-thieu" class="no-underline">
+                      <router-link to="/gioi-thieu" class="no-underline text-base font-medium">
                         Giới thiệu 
-                        <DownOutlined/>
+                        <DownOutlined class="text-[6px]"/>
                       </router-link>
                     </li>
-                    <li><router-link to="/dich-vu" class="no-underline">Dịch vụ
-                      <DownOutlined/>
+                    <li><router-link to="/dich-vu" class="no-underline text-base font-medium">
+                      Dịch vụ
+                      <DownOutlined class="text-[6px]"/>
                     </router-link></li>
-                    <li><router-link to="/bang-gia" class="no-underline">Bảng giá
+                    <li><router-link to="/bang-gia" class="no-underline text-base font-medium">
+                      Bảng giá
 
                     </router-link></li>
-                    <li><router-link to="/tin-tuc" class="no-underline">Tin tức
-                      <DownOutlined/>
+                    <li><router-link to="/tin-tuc" class="no-underline text-base font-medium">
+                      Tin tức
+                      <DownOutlined class="text-[6px]"/>
                     </router-link></li>
                 </ul>
-                <button class="p-2 rounded border-none bg-red-500 text-white">ĐẶT HẸN</button>
-                <button class="p-2 rounded border-none bg-blue-400 text-white ">19006899</button>
-                <button class="p-2 rounded border-none bg-blue-400 text-white ">EN</button>
+                <button class="p-2 border-none bg-red-500 text-white ">ĐẶT HẸN</button>
+                <button class="p-2 border-none bg-blue-400 text-white  ">19006899</button>
+                <button class="p-2 border-none bg-blue-400 text-white  ">EN</button>
             </div>
         </header>
     </div>
