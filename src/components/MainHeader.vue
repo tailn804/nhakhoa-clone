@@ -1,6 +1,6 @@
 <template>
     <div class="bg-blue-300 w-full">
-        <header class="flex justify-between mx-auto container bg-white">
+        <header class="flex relative justify-between mx-auto max-w-[1100px] bg-white">
            <router-link to="/" class="no-underline">
             <div class="flex p-2">
                 <img class="w-20 h-14" src="https://nhakhoakim.com/wp-content/themes/kimdental-child/assets/images/logo.svg" alt="Logo">
@@ -27,7 +27,7 @@
                   </li> -->
 
                   <li v-for="item in dataMenu" :key="item.id" class="no-underline " >
-                    <a-dropdown  class="no-underline flex items-center">
+                    <a-dropdown  class="no-underline flex py-5 px-2 items-center">
                       <RouterLink :to="item.url" class="ant-dropdown-link" @click.prevent>
                         {{ item.title }}
                         <DownOutlined  class="text-black  text-[6px] ml-2 mr-2 font-bold"/>
@@ -41,71 +41,38 @@
                         </a-menu>
                       </template>
                       
-                      <<template #overlay v-if="item.childrenGroup1 && item.childrenGroup2">
-                        <div>
+                      <template  class=""  #overlay v-if="item.childrenGroup1 && item.childrenGroup2">
+
+                        <div class=" flex relative top-0 left-[133px]" >
+                          
                           <a-row>
-                            <a-col>
+                            <!-- col 1 image -->
+                            <a-col >
                               <img :src="item.image" alt="">
                             </a-col>
-                            <a-col>
-                              <a-menu>
-        <a-menu-item>
-          <a href="javascript:;">1st menu item</a>
-        </a-menu-item>
-        <a-menu-item>
-          <a href="javascript:;">2nd menu item</a>
-        </a-menu-item>
-        <a-menu-item>
-          <a href="javascript:;">3rd menu item</a>
-        </a-menu-item>
-      </a-menu>
-                            </a-col>
-                            <a-col></a-col>
+                             <div class="flex pa">
+                              <a-col class="border-none">
+                                <a-menu class="!border-none !shadow-none">
+                                  <a-menu-item class="!bg-transparent ant-dropdown-link" v-for="subItem in item.childrenGroup1"  :key="subItem.id">
+                                    <router-link class="" :to="subItem.url">{{ subItem.title }}</router-link>
+                                  </a-menu-item>
+                                </a-menu>
+                              </a-col>
+                              <a-col class="">
+                                <a-menu>
+                                  <a-menu-item v-for="subItem in item.childrenGroup2" :key="subItem.id">
+                                    <router-link :to="subItem.url">{{ subItem.title }}</router-link>
+                                  </a-menu-item>
+                                </a-menu>
+                              </a-col>
+                             </div>
+                            
                           </a-row>
                         </div>
                       </template>
 
                     </a-dropdown>
                   </li>
-                    <!-- <li v-for="item in dataMenu" :key="item.id">
-                        <a-dropdown>
-                          <router-link :to="item.url"  class="no-underline text-base font-medium">
-                            {{ item.title }}
-                        <DownOutlined class="text-[6px]"/>
-                      </router-link>
-                          <template #overlay>
-                              <a-menu>
-                                <a-menu-item>
-                                  <RouterLink to="">
-                                    Về nha khoa Kim
-                                  </RouterLink>
-                                </a-menu-item>
-                                <a-menu-item>
-                                  <RouterLink to="">Đội ngũ bác sĩ</RouterLink>
-                                </a-menu-item>
-                                <a-menu-item>
-                                  <RouterLink to="">Những thành tựu Nha 
-                                    khoa Kim</RouterLink>
-                                </a-menu-item>
-                                <a-menu-item>
-                                  <RouterLink to="">Nhà máy sản xuất răng sứ</RouterLink>
-                                </a-menu-item>
-                                <a-menu-item>
-                                  <RouterLink to="">Tiêu chuẩn chất lượng</RouterLink>
-                                </a-menu-item>
-                                <a-menu-item>
-                                  <RouterLink to="">Trải nghiệm khách hàng</RouterLink>
-                                </a-menu-item>
-                                <a-menu-item>
-                                  <RouterLink to="">Địa chỉ chi nhánh </RouterLink>
-                                </a-menu-item>
-                                <a-menu-item>
-                                  <RouterLink to="">Cơ so</RouterLink>
-                                </a-menu-item>
-                              </a-menu>
-                          </template>
-                        </a-dropdown>
-                    </li> -->
                 </ul>
                 <button class="p-2 border-none bg-red-500 text-white ">ĐẶT HẸN</button>
                 <button class="p-2 border-none bg-blue-400 text-white  ">19006899</button>
@@ -315,12 +282,18 @@ const data = ref([
 ])
 </script> -->
 
-<style lang="scss" scoped>
+<!-- <style lang="scss" scoped>
 .container {
   width: 1100px;
 }
 
 .ant-btn-group .ant-btn{
 
+}
+</style> -->
+
+<style scoped>
+:deep(.ant-dropdown-link:hover) {
+  color: aqua;
 }
 </style>
