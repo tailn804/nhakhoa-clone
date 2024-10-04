@@ -7,7 +7,7 @@
                 <h1 class="font-bold ml-3">NHA KHOA KIM</h1>
             </div>
            </router-link>
-            <div class="flex flex-row gap-3 items-center mr-3 text-black">
+            <div class="flex flex-row gap-2 items-center mr-3 text-black">
               <!-- <template v-for="item in dataMenu" :key="item.id">
                 <nuxt-link :to="item.url">
                   <span>{{ item.title }}</span>
@@ -27,7 +27,7 @@
                   </li> -->
 
                   <li v-for="item in dataMenu" :key="item.id" class="no-underline text-base  " >
-                    <a-dropdown  class=" no-underline flex py-5 px-2 items-center text-black">
+                    <a-dropdown  class=" no-underline flex py-5 items-center text-black">
                       <RouterLink :to="item.url" class="ant-dropdown-link-nav font-medium " @click.prevent>
                         {{ item.title }}
                         <DownOutlined v-if="item.id !== 31" class="text-black  text-[6px] ml-2 mr-2 font-bold"/>
@@ -35,8 +35,8 @@
                       
                       <template #overlay v-if="item.children && item.children.length">
                         <a-menu class="ant-subnav-menu first:rounded-t-none last:rounded-b-[4px] ">
-                          <a-menu-item class="!bg-transparent ant-dropdown-link" v-for="subItem in item.children" :key="subItem.id">
-                            <RouterLink class="" :to="subItem.url" >{{ subItem.title }}</RouterLink>
+                          <a-menu-item class="!bg-transparent ant-dropdown-link  " v-for="subItem in item.children" :key="subItem.id">
+                            <RouterLink class="text-[15px] font-normal" :to="subItem.url" >{{ subItem.title }}</RouterLink>
                           </a-menu-item>
                         </a-menu>
                       </template>
@@ -74,9 +74,23 @@
                     </a-dropdown>
                   </li>
                 </ul>
-                <button class="p-2 border-none bg-red-500 text-white ">ĐẶT HẸN</button>
+
+                  <a-button class="bg-[#c80000] text-white hover:text-white hover:opacity-5 custom-button rounded-none" size="large">
+                    <font-awesome-icon class="pb-[1px] pr-1":icon="['fas', 'calendar-days']" />
+                    <span>ĐẶT HẸN</span>
+                  </a-button>
+                  <a-button class="bg-[#005f9d] text-white custom-button rounded-none" size="large">
+                    <font-awesome-icon class="text-xl pr-1" :icon="['fas', 'phone-volume']" />
+                    1900 6899
+                  </a-button>
+                  <a-button class="bg-[#005f9d] text-white custom-button rounded-none" size="large">
+                    <img class="bg-contain w-6 h-3 pt-[1px] pr-1" src="https://nhakhoakim.com/wp-content/themes/kimdental-child/assets/images/flag-eng-uk.svg" alt="">
+                    EN
+                  </a-button>
+
+                <!-- <button class="p-2 border-none bg-red-500 text-white ">ĐẶT HẸN</button>
                 <button class="p-2 border-none bg-blue-400 text-white  ">19006899</button>
-                <button class="p-2 border-none bg-blue-400 text-white  ">EN</button>
+                <button class="p-2 border-none bg-blue-400 text-white  ">EN</button> -->
             </div>
         </header>
     </div>
@@ -94,6 +108,7 @@
 import { DownOutlined } from '@ant-design/icons-vue';
 import { Dropdown, Menu } from 'ant-design-vue';
 import { ref } from 'vue';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 const dataMenu = ref([
   {
@@ -113,7 +128,7 @@ const dataMenu = ref([
       },
       {
         id: 3,
-        title: "Những thành tựu Nha KHoa Kim",
+        title: "Những thành tựu Nha Khoa Kim",
         url: "",
       },
       {
@@ -292,6 +307,10 @@ const data = ref([
 <style scoped>
 .ant-nav-text{
   font-weight: 700;
+}
+
+.custom-button{
+  border-radius: 0;
 }
 
 .ant-subnav-menu{
