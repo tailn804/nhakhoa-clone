@@ -26,47 +26,47 @@
                     </router-link>
                   </li> -->
 
-                  <li v-for="item in dataMenu" :key="item.id" class="no-underline " >
-                    <a-dropdown  class="no-underline flex py-5 px-2 items-center">
-                      <RouterLink :to="item.url" class="ant-dropdown-link" @click.prevent>
+                  <li v-for="item in dataMenu" :key="item.id" class="no-underline text-base  " >
+                    <a-dropdown  class=" no-underline flex py-5 px-2 items-center text-black">
+                      <RouterLink :to="item.url" class="ant-dropdown-link-nav font-medium " @click.prevent>
                         {{ item.title }}
-                        <DownOutlined  class="text-black  text-[6px] ml-2 mr-2 font-bold"/>
+                        <DownOutlined v-if="item.id !== 31" class="text-black  text-[6px] ml-2 mr-2 font-bold"/>
                       </RouterLink>
                       
                       <template #overlay v-if="item.children && item.children.length">
-                        <a-menu >
-                          <a-menu-item v-for="subItem in item.children" :key="subItem.id">
-                            <RouterLink :to="subItem.url" >{{ subItem.title }}</RouterLink>
+                        <a-menu class="ant-subnav-menu first:rounded-t-none last:rounded-b-[4px] ">
+                          <a-menu-item class="!bg-transparent ant-dropdown-link" v-for="subItem in item.children" :key="subItem.id">
+                            <RouterLink class="" :to="subItem.url" >{{ subItem.title }}</RouterLink>
                           </a-menu-item>
                         </a-menu>
                       </template>
                       
                       <template  class=""  #overlay v-if="item.childrenGroup1 && item.childrenGroup2">
 
-                        <div class=" flex relative top-0 left-[133px]" >
+                        <div class=" ant-subnav-menu first:rounded-t-none last:rounded-b-[4px] flex relative top-0 left-[133px]" >
                           
                           <a-row>
                             <!-- col 1 image -->
                             <a-col >
                               <img :src="item.image" alt="">
                             </a-col>
-                             <div class="flex pa">
-                              <a-col class="border-none">
+                             <div class="flex  bg-orange-400 p-10">
+                              <a-col class="py-2 pl-7 ">
                                 <a-menu class="!border-none !shadow-none">
                                   <a-menu-item class="!bg-transparent ant-dropdown-link" v-for="subItem in item.childrenGroup1"  :key="subItem.id">
                                     <router-link class="" :to="subItem.url">{{ subItem.title }}</router-link>
                                   </a-menu-item>
                                 </a-menu>
                               </a-col>
-                              <a-col class="">
-                                <a-menu>
+                              <a-col class=" py-2 pl-7">
+                                <a-menu class="!border-none !shadow-none">
                                   <a-menu-item v-for="subItem in item.childrenGroup2" :key="subItem.id">
                                     <router-link :to="subItem.url">{{ subItem.title }}</router-link>
                                   </a-menu-item>
                                 </a-menu>
                               </a-col>
                              </div>
-                            
+                   
                           </a-row>
                         </div>
                       </template>
@@ -212,46 +212,43 @@ const dataMenu = ref([
     id: 4,
     title: "Tin tức",
     url: "#",
+    children:[
+      {
+        id: 1,
+        title: "Hoạt động nha khoa kim",
+        url:"",
+      },
+      {
+        id: 1,
+        title: "Hợp tác chiến lược",
+        url:"",
+      },
+      {
+        id: 1,
+        title: "Tin tức & sự kiện",
+        url:"",
+      },
+      {
+        id: 1,
+        title: "Kiến thức răng miệng",
+        url:"",
+      },
+      {
+        id: 1,
+        title: "Hành trình răng hạnh phúc",
+        url:"",
+      },
+      {
+        id: 1,
+        title: "Liên kết web ",
+        url:"",
+      },
+
+    ]
   },
 ])
 
-const dataUser = ref([
-  {
-    id: 1,
-    name: "Mỹ Hương",
-    sdt: "1232345344",
-    email: "Myhuong@gmail.com",
-    avatar: 'https://vnn-imgs-a1.vgcloud.vn/icdn.dantri.com.vn/2021/06/20/thieu-nu-ha-thanh-xinh-xan-dien-do-goi-cam-thieu-dot-moi-anh-nhindocx-1624197301278.png',
-  },
-  {
-    id: 1,
-    name: "asda",
-    sdt: "123123",
-    email: "qwerqw",
-    avatar: "https://cdn.24h.com.vn/upload/3-2022/images/2022-08-19/Gai-xinh-ngay-tho-lo-qua-khu-277585438_4600347833405176_193249803126218059_n-1660905398-70-width1754height2048.jpg",
-  },
-  {
-    id: 1,
-    name: "qwer",
-    sdt: "1534345324",
-    email: "wqwer@",
-    avatar: "https://cdn.24h.com.vn/upload/3-2022/images/2022-08-19/Gai-xinh-ngay-tho-lo-qua-khu-277585438_4600347833405176_193249803126218059_n-1660905398-70-width1754height2048.jpg",
-  },
-  {
-    id: 1,
-    name: "adfas",
-    sdt: "57685678567",
-    email: "asfsdf@",
-    avatar: "https://cdn.24h.com.vn/upload/3-2022/images/2022-08-19/Gai-xinh-ngay-tho-lo-qua-khu-277585438_4600347833405176_193249803126218059_n-1660905398-70-width1754height2048.jpg",
-  },
-  {
-    id: 1,
-    name: "sfasasdf",
-    sdt: "4524645734",
-    email: "fSSFADS@",
-    avatar: "https://cdn.24h.com.vn/upload/3-2022/images/2022-08-19/Gai-xinh-ngay-tho-lo-qua-khu-277585438_4600347833405176_193249803126218059_n-1660905398-70-width1754height2048.jpg",
-  },
-])
+
 </script>
 <!-- <script setup>
 import { ref } from 'vue'
@@ -293,7 +290,20 @@ const data = ref([
 </style> -->
 
 <style scoped>
+.ant-nav-text{
+  font-weight: 700;
+}
+
+.ant-subnav-menu{
+  border-top: 3px solid #017afd;
+}
+
+:deep(.ant-dropdown-link-nav:hover){
+  color: #017afd;
+}
+
 :deep(.ant-dropdown-link:hover) {
   color: aqua;
+  /* color: #404a64; */
 }
 </style>
