@@ -4,9 +4,9 @@ const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
-            path: '/dang-nhap',
-            name: 'dang-nhap',
-            component: () => import("@/views/auth/DangNhap.vue"),
+            path: '/',
+            name: '',
+            component: () => import("@/pages/index.vue"),
         },
     ]
 });
