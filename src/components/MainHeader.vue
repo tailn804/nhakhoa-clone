@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-[#1C1C1C]">
+  <div class="w-full fixed bg-[#1C1C1C]">
     <div class="flex justify-between items-center p-5 text-white text-xl">
       <div>
         <span>Sites.wiki</span>
@@ -10,6 +10,7 @@
             <span>{{item.title}}</span>
           </router-link>
         </template>
+        <button></button>
       </div>
     </div>
   </div>
