@@ -1,11 +1,13 @@
 
 <template>
-  <main>
-
-  </main>
+  <MainHeader />
+  <div>
+    <RouterView />
+  </div>
 </template>
 
 <script setup>
+import MainHeader from "@/components/MainHeader.vue";
 </script>
 
 <style scoped>
