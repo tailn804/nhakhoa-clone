@@ -1,6 +1,6 @@
 <template>
   <div class="w-full fixed bg-[#1C1C1C]">
-    <div class="flex justify-between items-center p-5 text-white text-xl">
+    <div class="flex justify-between items-center p-5 text-white text-xl ">
       <div>
         <span>Sites.wiki</span>
       </div>
@@ -27,22 +27,22 @@ const menuData = ref([
   },
   {
     id: 2,
-    link: '/',
+    link: '/classic',
     title: 'Class Wiki'
   },
   {
     id: 3,
-    link: '/',
+    link: '/article',
     title: 'Article'
   },
   {
     id: 4,
-    link: '/',
+    link: '/page',
     title: 'Page'
   },
   {
     id: 5,
-    link: '/',
+    link: '/tasks',
     title: 'Tasks'
   },
 

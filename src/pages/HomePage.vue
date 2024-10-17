@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full h-auto bg-white  pb-12">
-    <div class="max-w-6xl mx-auto container flex flex-col py-4 items-start px-36">
+  <div class="w-full h-auto  bg-white  pb-12 " >
+    <div class="max-w-6xl mx-auto container flex flex-col py-4 pt-16 items-start px-36">
       <div class="px-2 py-3" >
         <div class="">
           <span class="font-sans text-3xl">📚</span>
