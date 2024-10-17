@@ -5,9 +5,29 @@ const router = createRouter({
     routes: [
         {
             path: '/',
-            name: '',
+            name: 'wiki',
             component: () => import("@/pages/HomePage.vue"),
         },
+        {
+            path: '/classic',
+            name: 'classic',
+            component: () => import("@/pages/ClassicWikiPage.vue"),
+        },
+        {
+            path: '/article',
+            name: 'article',
+            component: () => import("@/pages/ArticlePage.vue"),
+        },
+        {
+            path: '/page',
+            name: 'page',
+            component: () => import("@/pages/PageClass.vue"),
+        },
+        {
+            path: '/tasks',
+            name: 'tasks',
+            component: () => import("@/pages/TasksPage.vue"),
+        }
     ]
 });
 
