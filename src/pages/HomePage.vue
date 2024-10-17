@@ -1,21 +1,42 @@
 <template>
-  <div class="w-full h-auto bg-white pt-32">
-    <div class="max-w-3xl mx-auto container flex flex-col items-start px-36">
-      <div >
+  <div class="w-full h-auto bg-white pt-32 pb-12">
+    <div class="max-w-6xl mx-auto container flex flex-col py-4 items-start px-36">
+      <div class="px-2 py-3" >
         <div class="">
           <span class="font-sans text-3xl">📚</span>
         </div>
-        <div class="pt-2">
-          <span>Sites.wiki</span>
+        <div class="mt-2">
+          <span class="font-bold text-3xl">Sites.wiki</span>
         </div>
-        <div>
-          <span>About</span>
+        <div class="mt-2">
+          <span class="font-normal text-2xl">About</span>
         </div>
-        <div>
-          <span>
-            Minimalist wiki template powered by Google Sites for your company intranet included in Google Workspace.
+        <div class="mt-2">
+          <span class=" text-lg">
+            Minimalist wiki template powered by Google Sites for your company <br> 
+            intranet included in Google Workspace.
           </span>
         </div>
+      </div>
+
+      <div class="grid grid-cols-2 flex-wrap  px-2 mt-10 py-3 w-full">
+        <div  v-for="category in dataCategories" :key="category.id">
+          <div class="border-b border-black py-2 w-[75%]">
+            <span class="leading-8 font-bold text-lg">
+            {{ category.title }}
+          </span>
+          </div>
+          <div class="py-[14px] px-2">
+            <div class="my-3" v-for="item in category.items" :key="item.name">
+            <router-link class="text-xl" :to="item.url">
+              <span class="mr-2">{{ item.icon }}</span>
+              <span>{{ item.name }}</span>
+            </router-link>
+             
+          </div>
+          </div>
+        </div>
+        
       </div>
     </div>
   </div>
@@ -57,7 +78,7 @@ import { ref } from 'vue';
         name:'FAQ', icon: '🌿', url:'',
         },
         {
-        name:'Training', icon: '', url:'',
+        name:'Training', icon: '🍊', url:'',
         },
     ]
     },
@@ -126,3 +147,6 @@ import { ref } from 'vue';
     },
   ])
 </script>
+
+<style scoped>
+</style>
