@@ -10,7 +10,7 @@
             <span>{{item.title}}</span>
           </router-link>
         </template>
-        <button></button>
+        <button> <font-awesome-icon :icon="['fas', 'magnifying-glass']" /></button>
       </div>
     </div>
   </div>
