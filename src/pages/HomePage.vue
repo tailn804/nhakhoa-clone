@@ -30,13 +30,11 @@
             <div class="my-3" v-for="item in category.items" :key="item.name">
             <router-link class="text-xl" :to="item.url">
               <span class="mr-2">{{ item.icon }}</span>
-              <span>{{ item.name }}</span>
+              <span class="text-lg">{{ item.name }}</span>
             </router-link>
-             
           </div>
           </div>
         </div>
-        
       </div>
     </div>
   </div>

@@ -1,9 +1,12 @@
 <template>
-    <div class="py-4">
-        <div class="mx-auto px-4">
-            <span>
+    <div class="w-full">
+        <div class="mx-auto container p-4 flex flex-row justify-between items-center">
+            <div></div>
+            <div class="">
+                <span>
                 © 2023 Kirksville Web Design Inc. 
-            </span>
+                </span>
+            </div>
         </div>
     </div>
 </template>
