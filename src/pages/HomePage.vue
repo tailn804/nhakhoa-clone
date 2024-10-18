@@ -1,9 +1,12 @@
 <template>
   <div class="w-full h-auto  bg-white  pb-12 " >
-    <div class="max-w-6xl mx-auto container flex flex-col py-4 pt-16 items-start px-36">
+    <div class="max-w-3xl mx-auto container flex flex-col py-4 pt-16 items-start ">
       <div class="px-2 py-3" >
+
+        <!-- About -->
         <div class="">
-          <span class="font-sans text-3xl">📚</span>
+          <font-awesome-icon class="text-3xl" :icon="['fas', 'book']" />
+          <!-- <span class="font-sans text-3xl">📚</span> -->
         </div>
         <div class="mt-2">
           <span class="font-bold text-3xl">Sites.wiki</span>
@@ -19,6 +22,7 @@
         </div>
       </div>
 
+      <!-- Content -->
       <div class="grid grid-cols-2 flex-wrap  px-2 mt-10 py-3 w-full">
         <div  v-for="category in dataCategories" :key="category.id">
           <div class="border-b border-black py-2 w-[75%]">
@@ -29,7 +33,8 @@
           <div class="py-[14px] px-2">
             <div class="my-3" v-for="item in category.items" :key="item.name">
             <router-link class="text-xl" :to="item.url">
-              <span class="mr-2">{{ item.icon }}</span>
+              <font-awesome-icon class="mr-2" :icon="item.icon" />
+              <!-- <span class="mr-2">{{ item.icon }}</span> -->
               <span class="text-lg">{{ item.name }}</span>
             </router-link>
           </div>
@@ -49,16 +54,16 @@ import { ref } from 'vue';
       title: 'Top Wiki Pages',
       items: [
         {
-        name:'Announcements', icon: '⭐️', url:'',
+        name:'Announcements', icon: ['far', 'star'], url:'',
         },
         {
-        name:'Company Directory', icon: '💎', url:'',
+        name:'Company Directory', icon: ['far', 'gem'], url:'',
         },
         {
-        name:'Instant Messaging', icon: '💬', url:'',
+        name:'Instant Messaging', icon: ['far', 'comment-dots'], url:'',
         },
         {
-        name:'Customer Service', icon: '📞', url:'',
+        name:'Customer Service', icon: ['fas', 'phone'], url:'',
         },
     ]
     },
@@ -67,16 +72,16 @@ import { ref } from 'vue';
       title: 'New Employees',
       items: [
         {
-        name:'Onboarding', icon: '🏄‍♀️', url:'',
+        name:'Onboarding', icon: ['fas', 'person-snowboarding'], url:'',
         },
         {
-        name:'Glossary', icon: '📋', url:'',
+        name:'Glossary', icon: ['fas', 'book-medical'], url:'',
         },
         {
-        name:'FAQ', icon: '🌿', url:'',
+        name:'FAQ', icon: ['fas', 'clipboard-question'], url:'',
         },
         {
-        name:'Training', icon: '🍊', url:'',
+        name:'Training', icon: ['far', 'circle'], url:'',
         },
     ]
     },
@@ -85,13 +90,13 @@ import { ref } from 'vue';
       title: 'Extras',
       items: [
         {
-        name:'Scheduling', icon: '⌚', url:'',
+        name:'Scheduling', icon: ['far', 'clock'], url:'',
         },
         {
-        name:'Support', icon: '🌈', url:'',
+        name:'Support', icon: ['fas', 'rainbow'], url:'',
         },
         {
-        name:'Pay Stubs', icon: '🎫', url:'',
+        name:'Pay Stubs', icon: ['fas', 'truck'], url:'',
         },
     ]
     },
@@ -100,13 +105,13 @@ import { ref } from 'vue';
       title: 'News & Updates',
       items: [
         {
-        name:'Employee Feedback', icon: '🥳', url:'',
+        name:'Employee Feedback', icon: ['far', 'face-smile'], url:'',
         },
         {
-        name:'Calendars', icon: '🗓', url:'',
+        name:'Calendars', icon: ['far', 'calendar'], url:'',
         },
         {
-        name:'Health & Safety', icon: '🌸', url:'',
+        name:'Health & Safety', icon: ['fas', 'shield'], url:'',
         },
     ]
     },
@@ -115,16 +120,16 @@ import { ref } from 'vue';
       title: 'Documents',
       items: [
         {
-        name:'HR Forms', icon: '📁', url:'',
+        name:'HR Forms', icon: ['far', 'folder-open'], url:'',
         },
         {
-        name:'Social ', icon: '🔮', url:'',
+        name:'Social ', icon: ['far', 'lightbulb'], url:'',
         },
         {
-        name:'Network', icon: '🕸', url:'',
+        name:'Network', icon: ['fas', 'network-wired'], url:'',
         },
         {
-        name:'Event', icon: '🐠', url:'',
+        name:'Event', icon: ['fas', 'fish'], url:'',
         },
     ]
     },
@@ -133,13 +138,13 @@ import { ref } from 'vue';
       title: 'Social Platforms',
       items: [
         {
-        name:'Professional Dev', icon: '🖤', url:'',
+        name:'Professional Dev', icon: ['fas', 'heart'], url:'',
         },
         {
-        name:'From the CEO', icon: '📣', url:'',
+        name:'From the CEO', icon: ['fas', 'bullhorn'], url:'',
         },
         {
-        name:'Learning System', icon: '🌞', url:'',
+        name:'Learning System', icon: ['fas', 'sun'], url:'',
         },
     ]
     },
