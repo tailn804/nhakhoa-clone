@@ -11,7 +11,11 @@ export default {
     "./nuxt.config.{js,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      listStyleType:{
+        square: 'square',
+      }
+    },
   },
   plugins: [],
   corePlugins: {

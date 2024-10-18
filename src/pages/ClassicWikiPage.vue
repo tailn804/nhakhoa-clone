@@ -12,7 +12,7 @@
             <span class="font-normal text-2xl">About</span>
           </div>
           <div class="mt-2">
-            <span class=" text-lg">
+            <span class="text-lg">
               Minimalist wiki template powered by Google Sites for your company <br> 
               intranet included in Google Workspace.
             </span>
