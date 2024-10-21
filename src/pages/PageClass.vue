@@ -2,7 +2,7 @@
 
     <!-- Banner -->
     <div
-        class=" w-full h-[370px] -z-10 bg-cover bg- bg-center bg-no-repeat  bg-[url('https://lh3.googleusercontent.com/BiKM-I5SPHKhZR9lIRlbaYA0iQ7EyVRQfV75HId7O5q_ibCdVoideRcLCrEKJjeo3dNacjcwPNcGHSKyCEfCx8U=w16383')]">
+        class=" w-full h-[370px] -z-10 bg-cover bg- bg-center bg-no-repeat  bg-[url('https://lh6.googleusercontent.com/ALZPDHFzpI3FYuTwY-GTf9dthQ0PJJCE1GaMS_fQCvbYxB5I7-nE0kwq4ZDfi7OO0QHsYHydswoF5v3n23YMXiw=w16383')]">
     </div>
 
     <!-- Content -->
@@ -85,27 +85,37 @@
         </div>
     </div>
 
-    <div class="py-[84px] px-24">
-        <div>
-            <span>
+    <div class="py-[84px] px-24 grid grid-cols-3 bg-gray-50">
+        <div class="col-span-2 pr-6 leading-8">
+            <span class="text-2xl block">
                 Wider Page Content Block
             </span>
-            <span>
+            <span class="mt-2 block text-[19px]">
                 Google Sites started out as JotSpot, the name and sole product of a software company that offered enterprise social software.[citation needed] It was targeted mainly at small-sized and medium-sized businesses. The company was founded by Joe Kraus and Graham Spencer, co-founders of Excite.
             </span>
-            <span>
+            <span class="mt-2 block text-[19px]">
                 In February 2006, JotSpot was named part of Business 2.0, "Next Net 25",[1] and in May 2006, it was honored as one of InfoWorld's "15 Start-ups to Watch".[2] In October 2006, JotSpot was acquired by Google.[3] Google announced a prolonged data transition of webpages created using Google Page Creator (also known as "Google Pages") to Google Sites servers in 2007. On February 28, 2008, Google Sites was unveiled using the JotSpot technology.[4] The service was free, but users needed a domain name, which Google offered for $10. However, as of May 21, 2008, Google Sites became available for free, separately from Google Apps, and without the need for a domain.[5]
             </span>
         </div>
-        <div>
-            <div>
-                
-            </div>
-            <span>
-
+        <div class="mt-14">
+            <div class="w-[380px] h-[300px] border-dashed border-2 border-[#e0e0e0] bg-[#f1f1f1]"></div>
+            <span class="px-2 py-3 block text-center text-[16px]">
+                Side image small text caption description
             </span>
-        </div>
+        </div>    
     </div>
+
+    <div class="px-24 max-w-[783px] pb-[76px] ">   
+            <div class=" mt-10 w-[783px] h-[407px] border-dashed border-2 border-[#e0e0e0] bg-[#f1f1f1]"></div>
+            <div class="w-[783px] px-2 pt-10">
+                <span class="mt-2 block text-[19px]">
+                In June 2016, Google introduced a complete rebuild of the Google Sites platform, named the New Google Sites,[6][7] along with transition schedule from Classic Google Sites.[8] The new Google Sites does not use JotSpot technology.
+            </span>
+            <span class="mt-2 block text-[19px]">
+                In August 2020, the new Google Sites became the default option for website creation, while in November 2021, all websites made with classic Google Sites were archived.[9]
+            </span>
+            </div>
+        </div>
 </template>
 <script setup>
 import { icon } from '@fortawesome/fontawesome-svg-core';
@@ -198,4 +208,4 @@ const listMenu = ref([
    
 
 ])
-</script>
+ </script> 

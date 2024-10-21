@@ -24,7 +24,7 @@
             <div class="h-7"></div>
             <div class="px-3">
                 <div class=" my-4">
-                    <img class="w-auto h-[250px] bg-contain" src="https://lh5.googleusercontent.com/zWt9RgffQvFLz9HYg4Xr1PYLhGCCry6mrsaW0ayW5K9WotqvpWW9y4rKXp2-eedl7XxU1rC4DAeFjKgrBxL5E3ajLgUnhH7s3PVTM34T9SOWCwyYRDQrMTu0X142I54Uuw=w1280" alt="">
+                    <img class="w-auto h-[250px] bg-contain" src="https://lh5.googleusercontent.com/cdd46cBpnJ7OmERo01T5DnRihYW-xw2SwqZICOdJib-RP8IlS1o8qO80w3-5SIGVGLWPEkVX8QoRRvlRw3Jb0kIVfzHOFQKFXz63EE1-qhrtXCg1Y5r8AThqpmsdwEytQw=w1280" alt="">
                 </div>
                 <div class="h-5"></div>
                 <div class="px-2 py-3 ">
