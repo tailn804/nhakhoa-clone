@@ -79,10 +79,6 @@
             </div>
             </div>
         </div>
-      
-        <div>
-            
-        </div>
     </div>
 
     <div class="py-[84px] px-24 grid grid-cols-3 bg-gray-50">
