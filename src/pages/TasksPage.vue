@@ -1,10 +1,10 @@
 <template>
-    <div class="bg-white">
-        <font-awesome-icon class="text-[32px]" :icon="['fas', 'hammer']" />
-        <span class="font-bold text-[32px]" >
+    <div class="bg-white mx-auto px-9 max-w-[1280px]">
+        <font-awesome-icon class="text-[32px] block" :icon="['fas', 'hammer']" />
+        <span class="font-bold text-[32px] block" >
             Tasks.co
         </span>
-        <span>
+        <span class="">
             Work Assignments
         </span>
         <span>
