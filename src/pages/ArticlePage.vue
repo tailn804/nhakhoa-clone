@@ -24,7 +24,7 @@
             <div class="h-7"></div>
             <div class="px-3">
                 <div class=" my-4">
-                    <img class="w-auto h-[250px] bg-contain" src="https://lh5.googleusercontent.com/cdd46cBpnJ7OmERo01T5DnRihYW-xw2SwqZICOdJib-RP8IlS1o8qO80w3-5SIGVGLWPEkVX8QoRRvlRw3Jb0kIVfzHOFQKFXz63EE1-qhrtXCg1Y5r8AThqpmsdwEytQw=w1280" alt="">
+                    <img class="w-auto h-[250px] bg-contain" src="/src/assets/images/Space.png" alt="">
                 </div>
                 <div class="h-5"></div>
                 <div class="px-2 py-3 ">
@@ -78,7 +78,7 @@
                     </ul>
             </div>
             <div class=" ml-4">
-                <img class="px-3 w-full h-[224px] bg-cover" src="https://lh5.googleusercontent.com/8S0rXnScQ7HGYer8yJmENj4wUObNUpjQ098c9U00fFro7XLSlg9Dk1SNZLYu5HWRbZy02Jz2CE3e-jxsBDGt75KaO9fl0-NV9mEsQib7Oqh7D7XDvwDnOquDBEpweJIJBg=w1280" alt="">
+                <img class="px-3 w-full h-[224px] bg-cover" src="/src/assets/images/Message.jpg" alt="">
                 <div class="px-2 py-3 text-center " >
                     <span class=" !leading-6 ">
                         Picture caption option with a short <br> description of image

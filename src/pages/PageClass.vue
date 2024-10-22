@@ -1,23 +1,26 @@
 <template>
 
     <!-- Banner -->
-    <div
-        class=" w-full h-[370px] -z-10 bg-cover bg- bg-center bg-no-repeat  bg-[url('https://lh6.googleusercontent.com/ALZPDHFzpI3FYuTwY-GTf9dthQ0PJJCE1GaMS_fQCvbYxB5I7-nE0kwq4ZDfi7OO0QHsYHydswoF5v3n23YMXiw=w16383')]">
-    </div>
+    <div class="relative w-full h-[370px] z-20 overflow-hidden bg-white">
+    <img class="absolute w-full h-full object-cover bg-center bg-no-repeat -z-10 top-[-68px] " src="/src/assets/images/Page.jpg" alt="">
+</div>
 
     <!-- Content -->
-    <div class="py-[84px] px-24 mx-auto bg-white">
+    <div class=" px-24 mx-auto bg-white">
+        <!-- Logo -->
         <div class="text-[32px]">
             <font-awesome-icon class=" text-[#1C1C1C]" :icon="['fas', 'book']" />
             <span class="font-bold">
                 Wiki/Page
             </span>
         </div>
+        <!-- About -->
         <div class="text-2xl">Your Sample Base Page</div>
         <div class="mt-2">
             <div class="text-[19px]">Have you explored Google Spaces for internal communications?</div>
             <div class="text-[19px]">Set up your teams for success and foster collaboration.</div>
         </div>
+
         <div class="flex justify-between pt-[62px] ">
             <div class=" flex flex-col p-2" v-for="item in listDataIcon" :key="item.id">
                 <font-awesome-icon class="text-[40px]" :icon="item.icon" />
@@ -26,6 +29,7 @@
                 </span>
             </div>
         </div>
+        
         <div class="pt-[92px] grid grid-cols-2 text-[19px] gap-7 leading-9">
             <div>
                 <span class="font-bold text-lg block">
@@ -81,7 +85,7 @@
         </div>
     </div>
 
-    <div class="py-[84px] px-24 grid grid-cols-3 bg-gray-50">
+    <div class="py-[84px] px-24 grid grid-cols-3 bg-[#f9f9f9]">
         <div class="col-span-2 pr-6 leading-8">
             <span class="text-2xl block">
                 Wider Page Content Block
@@ -101,8 +105,8 @@
         </div>    
     </div>
 
-    <div class="px-24 max-w-[783px] pb-[76px] ">   
-            <div class=" mt-10 w-[783px] h-[407px] border-dashed border-2 border-[#e0e0e0] bg-[#f1f1f1]"></div>
+    <div class="px-24  pb-[76px] bg-[#f9f9f9] ">   
+            <div class=" w-[783px] h-[407px] border-dashed border-2 border-[#e0e0e0] bg-[#f1f1f1]"></div>
             <div class="w-[783px] px-2 pt-10">
                 <span class="mt-2 block text-[19px]">
                 In June 2016, Google introduced a complete rebuild of the Google Sites platform, named the New Google Sites,[6][7] along with transition schedule from Classic Google Sites.[8] The new Google Sites does not use JotSpot technology.
@@ -111,7 +115,7 @@
                 In August 2020, the new Google Sites became the default option for website creation, while in November 2021, all websites made with classic Google Sites were archived.[9]
             </span>
             </div>
-        </div>
+    </div>
 </template>
 <script setup>
 import { icon } from '@fortawesome/fontawesome-svg-core';
@@ -142,66 +146,66 @@ const listDataIcon =ref([
     
 ]);
 
-const listMenu = ref([
-    {
-        id:1,
-        name:'Mission & Vision',
+// const listMenu = ref([
+//     {
+//         id:1,
+//         name:'Mission & Vision',
         
-        itemArr:[
-            {
-                id:1,
-                title:'You can use spaces or group conversations in Google Chat to <br> communicate with one or more people.',
-                subTitle:[
-                    {
-                        id:1,
-                        subTitleItem:'Spaces: A central place where people can share files, assign tasks, and stay connected.',
-                    },
-                    {
-                        id:2,
-                        subTitleItem:'Group conversations: Chat directly with a group. For example, use group conversations to have a quick discussion after a meeting.',
-                    },
-                ],
-            }
-        ]
-    },
-    {
-        id:2,
-        name:'Five Year Plan Aligned Goals',
-        itemArr:[
-            {
-                id:1,
-                title:'Collaborate on long-term projects with teams or specific groups. ',
-                subTitle:[
-                    {
-                        id:1,
-                        subTitleItem:'History is on by default and kept based on your organization’s policy.',
-                    },
-                    {
-                        id:2,
-                        subTitleItem:'If you use a work or school Google Account, the administrator may turn history on or off.',
-                    },
-                ],
-            }
-        ],
-        itemArr:[
-            {
-                id:2,
-                title:'When history is:',
-                subTitle:[
-                    {
-                        id:1,
-                        subTitleItem:"On: Messages follow your organization's data retention policy. If you use a personal account, messages are kept indefinitely.",
-                    },
-                    {
-                        id:2,
-                        subTitleItem:'Off: Messages are removed after 24 hours.',
-                    },
-                ],
-            }
-        ],
+//         itemArr:[
+//             {
+//                 id:1,
+//                 title:'You can use spaces or group conversations in Google Chat to <br> communicate with one or more people.',
+//                 subTitle:[
+//                     {
+//                         id:1,
+//                         subTitleItem:'Spaces: A central place where people can share files, assign tasks, and stay connected.',
+//                     },
+//                     {
+//                         id:2,
+//                         subTitleItem:'Group conversations: Chat directly with a group. For example, use group conversations to have a quick discussion after a meeting.',
+//                     },
+//                 ],
+//             }
+//         ]
+//     },
+//     {
+//         id:2,
+//         name:'Five Year Plan Aligned Goals',
+//         itemArr:[
+//             {
+//                 id:1,
+//                 title:'Collaborate on long-term projects with teams or specific groups. ',
+//                 subTitle:[
+//                     {
+//                         id:1,
+//                         subTitleItem:'History is on by default and kept based on your organization’s policy.',
+//                     },
+//                     {
+//                         id:2,
+//                         subTitleItem:'If you use a work or school Google Account, the administrator may turn history on or off.',
+//                     },
+//                 ],
+//             }
+//         ],
+//         itemArr:[
+//             {
+//                 id:2,
+//                 title:'When history is:',
+//                 subTitle:[
+//                     {
+//                         id:1,
+//                         subTitleItem:"On: Messages follow your organization's data retention policy. If you use a personal account, messages are kept indefinitely.",
+//                     },
+//                     {
+//                         id:2,
+//                         subTitleItem:'Off: Messages are removed after 24 hours.',
+//                     },
+//                 ],
+//             }
+//         ],
        
-    },
+//     },
    
 
-])
+// ])
  </script> 
