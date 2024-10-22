@@ -12,7 +12,7 @@
         </template>
         <button> <font-awesome-icon :icon="['fas', 'magnifying-glass']" /></button>
       </div>
-    </div>
+        </div>
   </div>
 </template>
 

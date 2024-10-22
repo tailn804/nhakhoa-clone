@@ -12,7 +12,7 @@
                 Make sure things get done around the office and keep track of who is responsible. This is a sample task type page for sites and everything is drag and drop so you can quickly reorganize.
             </span>
             
-            <div class="grid grid-cols-3 !gap-4">
+            <div class="grid grid-cols-3 gap-x-4 ">
                 <div class="" v-for="item in listData" :key="item.id">
                     <div class="py-3" >
                         <font-awesome-icon class="text-[22px] mr-1" :icon="item.img" />
@@ -33,6 +33,23 @@
                     </span>
                 </div>
             </div>
+           <div class="flex flex-row justify-center space-x-4">
+            <div class="w-1/3" v-for="item in listData1" :key="item.id">
+                    
+                    <span class="pt-3 text-[19px]">
+                        {{ item.title }}
+                    </span>
+
+                    <div class="mt-2">
+                        <font-awesome-icon :icon="item.icon" />
+                        <span>{{ item.subtitle }}</span>
+                    </div>
+
+                    <span class="mt-2">
+                        {{ item.text }}
+                    </span>
+            </div>
+           </div>
         </div>
    </main>
 </template>
