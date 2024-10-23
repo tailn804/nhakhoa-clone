@@ -1,7 +1,7 @@
 
 <template>
   
-    <MainHeader />
+    <MainHeader class="pt-[68px]" />
     <div class="h-[68px]"></div>
     <div>
       <RouterView />

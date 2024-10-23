@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-auto  bg-white  pb-12 " >
+  <div :class="{'pt-20': !isMenuOpen}"  class="w-full h-auto  bg-white  pb-12 " >
     <div class="max-w-3xl mx-auto container flex flex-col py-4 pt-16 items-start ">
       <div class="px-2 py-3" >
 
@@ -47,6 +47,14 @@
 
 <script setup>
 import { ref } from 'vue';
+import { defineProps } from 'vue';
+
+const props = defineProps({
+    isMenuOpen:{
+      type: Boolean,
+      default: false,
+    }
+  })
 
   const dataCategories = ref([
     {
@@ -149,6 +157,8 @@ import { ref } from 'vue';
     ]
     },
   ])
+
+  
 </script>
 
 <style scoped>
