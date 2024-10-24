@@ -1,7 +1,7 @@
 <template>
-    <div class=" w-full h-auto bg-white pb-12">
-        <div class=" mx-auto max-w-3xl container flex flex-col py-4 pt-16 items-start">
-            <div class="px-2 py-3">
+    <div class=" w-full h-auto  bg-white pb-12 grid grid-cols-1">
+        <div class=" mx-auto sm:max-w-3xl container flex flex-col justify-center items-center py-4 pt-16 ">
+            <div class="px-2 py-3 sm:w-full w-[392px]">
                 <div>
                     <font-awesome-icon class="text-3xl" :icon="['fas', 'book']" />
                 </div>
@@ -22,12 +22,12 @@
                 </div>
             </div>
             <div class="h-7"></div>
-            <div class="px-3">
+            <div class="sm:w-full">
                 <div class=" my-4">
-                    <img class="w-auto h-[250px] bg-contain" src="/src/assets/images/Space.png" alt="">
+                    <img class=" w-full sm:h-[250px] bg-contain" src="/src/assets/images/Space.png" alt="">
                 </div>
                 <div class="h-5"></div>
-                <div class="px-2 py-3 ">
+                <div class="px-2 py-3 sm:w-full w-[392px] ">
                     <p class="text-[19px] font-bold block">
                         Purpose
                     </p>
@@ -51,8 +51,8 @@
         
     </div>
     <div class="bg-white ">
-        <div class=" mx-auto  container flex   pl-60  pt-16 items-start">
-            <div class="px-2 py-3 leading-8 ">
+        <div class=" mx-auto container sm:flex-row w-full flex flex-col justify-center items-center sm:pl-[245px] pt-16 sm:items-start">
+            <div class="px-2 py-3 leading-8 w-[392px] sm:w-2/3 ">
                     <p class="text-[19px] font-bold block">
                         Message History
                     </p>
@@ -77,8 +77,8 @@
                         </li>
                     </ul>
             </div>
-            <div class=" ml-4">
-                <img class="px-3 w-full h-[224px] bg-cover" src="/src/assets/images/Message.jpg" alt="">
+            <div class=" sm:ml-4">
+                <img class="sm:px-3 sm:w-full sm:h-[191px] w-[288px] h-[230px] bg-cover" src="/src/assets/images/Message.jpg" alt="">
                 <div class="px-2 py-3 text-center " >
                     <span class=" !leading-6 ">
                         Picture caption option with a short <br> description of image

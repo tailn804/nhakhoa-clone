@@ -4,7 +4,7 @@ body,
   margin: 0;
   height: 100%;
   position: relative;
-  background: #E5E6EB;
+  background: white;
   font-family: "Open Sans", sans-serif;
   color: #000;
 }
@@ -13,7 +13,7 @@ body {
   font-size: 16px;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
-  background: #E5E6EB;
+  background: white;
 
   @media (max-width: 1024px) {
     height: 100%;

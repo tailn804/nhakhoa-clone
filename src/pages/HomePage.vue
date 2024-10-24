@@ -1,10 +1,9 @@
 <template>
-  <div :class="{'pt-20': !isMenuOpen}"  class="w-full h-auto  bg-white  pb-12 " >
-    <div class="max-w-3xl mx-auto container flex flex-col py-4 pt-16 items-start ">
-      <div class="px-2 py-3" >
-
+  <div class=" h-full sm:h-auto bg-white pb-12 grid grid-cols-1 sm:px-4  w-full " >
+    <div class="sm:max-w-3xl mx-auto container flex flex-col justify-center items-center ">
+      <div class="sm:px-2 sm:py-3 w-[392px] sm:w-full " >
         <!-- About -->
-        <div class="">
+        <div>
           <font-awesome-icon class="text-3xl" :icon="['fas', 'book']" />
           <!-- <span class="font-sans text-3xl">📚</span> -->
         </div>
@@ -23,9 +22,9 @@
       </div>
 
       <!-- Content -->
-      <div class="grid grid-cols-2 flex-wrap  px-2 mt-10 py-3 w-full">
-        <div  v-for="category in dataCategories" :key="category.id">
-          <div class="border-b border-black py-2 w-[75%]">
+      <div class="sm:grid sm:grid-cols-2 sm:px-2 mt-10 py-3 w-full flex flex-col justify-center items-center">
+        <div class="sm:w-full w-[276px]" v-for="category in dataCategories" :key="category.id">
+          <div class="border-b border-black py-2 sm:w-[75%]">
             <span class="leading-8 font-bold text-lg">
             {{ category.title }}
           </span>
@@ -34,7 +33,6 @@
             <div class="my-3" v-for="item in category.items" :key="item.name">
             <router-link class="text-xl" :to="item.url">
               <font-awesome-icon class="mr-2" :icon="item.icon" />
-              <!-- <span class="mr-2">{{ item.icon }}</span> -->
               <span class="text-lg">{{ item.name }}</span>
             </router-link>
           </div>

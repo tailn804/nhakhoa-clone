@@ -1,8 +1,8 @@
 <template>
    <main class="w-full bg-white ">
-        <div class=" mx-auto px-12 py-[72px] max-w-[1280px]  ">
+        <div class=" mx-auto sm:px-12 py-[72px] sm:max-w-[1280px] w-[392px]  ">
             <font-awesome-icon class="text-[32px] block" :icon="['fas', 'hammer']" />
-            <span class="font-bold text-[32px] block leading-10" >
+            <span class="font-bold text-[28px] sm:text-[32px] block my-2" >
                 Tasks.co
             </span>
             <span class="text-2xl block leading-10">
@@ -14,7 +14,7 @@
             </span>
            </div>
             
-            <div class="grid grid-cols-3 gap-x-4 pt-[72px] ">
+            <div class="grid sm:grid-cols-3 grid-cols-1 gap-x-4 pt-[72px] ">
                 <div class="" v-for="item in listData" :key="item.id">
                     <div class="pt-5 pb-6"  >
                         <font-awesome-icon class="text-[22px] pr-1" :style="{backgroundColor: item.bgColor}" :icon="item.img" />
@@ -35,7 +35,7 @@
                     </span>
                 </div>
             </div>
-           <div class="grid grid-cols-3 mt-6 gap-4 justify-items-center  ">
+           <div class="grid sm:grid-cols-3 grid-cols-1 mt-6 gap-4 justify-items-center  ">
             <div></div>
             <div class="col-span-1" v-for="item in listData1" :key="item.id">
                     
@@ -58,7 +58,7 @@
    </main>
 
    <div class=" bg-[#f9f9f9]">
-            <div class="mx-auto px-12 py-[72px] max-w-[1280px]">
+            <div class="mx-auto sm:px-12 py-[72px] sm:max-w-[1280px] w-[392px] flex flex-col justify-center ">
                 <div class="text-2xl">
                     <font-awesome-icon class="mr-2 " :icon="['fas', 'file']" />
                     <span >Archive of Tasks</span>

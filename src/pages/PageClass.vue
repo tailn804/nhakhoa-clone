@@ -1,12 +1,12 @@
 <template>
 
     <!-- Banner -->
-    <div class="relative w-full h-[370px] z-20 overflow-hidden bg-white">
-    <img class="absolute w-full h-full object-cover bg-center bg-no-repeat -z-10 top-[-68px] " src="/src/assets/images/Page.jpg" alt="">
-</div>
+    <div class="relative h-[250px] w-full sm:h-[370px] z-20 overflow-hidden bg-white">
+        <img class="absolute w-full h-full object-cover bg-center bg-no-repeat -z-10 sm:top-[-60px] top-[-60px] " src="/src/assets/images/Page.jpg" alt="">
+    </div>
 
     <!-- Content -->
-    <div class=" px-24 mx-auto bg-white">
+    <div class=" grid grid-cols-1 sm:px-24 w-[392px] mx-auto bg-white">
         <!-- Logo -->
         <div class="text-[32px]">
             <font-awesome-icon class=" text-[#1C1C1C]" :icon="['fas', 'book']" />
@@ -21,8 +21,8 @@
             <div class="text-[19px]">Set up your teams for success and foster collaboration.</div>
         </div>
 
-        <div class="flex justify-between pt-[62px] ">
-            <div class=" flex flex-col p-2" v-for="item in listDataIcon" :key="item.id">
+        <div class="sm:flex justify-between text-center pt-[62px] ">
+            <div class=" flex flex-col py-4" v-for="item in listDataIcon" :key="item.id">
                 <font-awesome-icon class="text-[40px]" :icon="item.icon" />
                 <span class="mt-2 text-[19px]">
                     {{ item.title }}
@@ -30,7 +30,7 @@
             </div>
         </div>
         
-        <div class="pt-[92px] grid grid-cols-2 text-[19px] gap-7 leading-9">
+        <div class="pt-[92px] grid sm:grid-cols-2 grid-cols-1 px-3 text-[19px] gap-7 leading-9">
             <div>
                 <span class="font-bold text-lg block">
                     Mission & Vision
@@ -85,8 +85,8 @@
         </div>
     </div>
 
-    <div class="py-[84px] px-24 grid grid-cols-3 bg-[#f9f9f9]">
-        <div class="col-span-2 pr-6 leading-8">
+    <div class="py-[84px] sm:px-24 sm:grid sm:grid-cols-3 flex flex-col justify-center items-center    bg-[#f9f9f9]">
+        <div class="col-span-2 sm:pr-6 leading-8 w-[392px]">
             <span class="text-2xl block">
                 Wider Page Content Block
             </span>
@@ -98,16 +98,16 @@
             </span>
         </div>
         <div class="mt-14">
-            <div class="w-[380px] h-[300px] border-dashed border-2 border-[#e0e0e0] bg-[#f1f1f1]"></div>
+            <div class="sm:w-[380px] sm:h-[300px] h-[204px] w-[392px] border-dashed border-2 border-[#e0e0e0] bg-[#f1f1f1]"></div>
             <span class="px-2 py-3 block text-center text-[16px]">
                 Side image small text caption description
             </span>
         </div>    
     </div>
 
-    <div class="px-24  pb-[76px] bg-[#f9f9f9] ">   
-            <div class=" w-[783px] h-[407px] border-dashed border-2 border-[#e0e0e0] bg-[#f1f1f1]"></div>
-            <div class="w-[783px] px-2 pt-10">
+    <div class="sm:px-24 flex flex-col justify-center items-center  pb-[76px] bg-[#f9f9f9] ">   
+            <div class="sm:w-[783px] sm:h-[407px] w-[392px] h-[304px] border-dashed border-2 border-[#e0e0e0] bg-[#f1f1f1]"></div>
+            <div class="sm:w-[783px] px-2 pt-10">
                 <span class="mt-2 block text-[19px]">
                 In June 2016, Google introduced a complete rebuild of the Google Sites platform, named the New Google Sites,[6][7] along with transition schedule from Classic Google Sites.[8] The new Google Sites does not use JotSpot technology.
             </span>

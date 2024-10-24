@@ -12,7 +12,9 @@
         </div>
         <!-- Logo -->
         <div>
-          <span>Sites.wiki</span>
+          <router-link to="/">
+            <span>Sites.wiki</span>
+          </router-link>
         </div>
       </div>
 
@@ -35,7 +37,7 @@
   <!-- Sidebar Overlay -->
   <div v-if="isMenuOpen">
     <!-- Overlay -->
-    <div class="fixed inset-0 bg-black bg-opacity-50 z-20" @click="toggleMenu">
+    <div class="fixed inset-0 bg-black bg-opacity-50 z-0" @click="toggleMenu">
     </div>
     
   </div>
@@ -49,7 +51,7 @@
 
       <div class="flex flex-col gap-4">
         <template v-for="item in menuData" :key="item.id">
-          <router-link :to="item.link" class="text-white no-underline hover:text-gray-400" @click="toggleMenu">
+          <router-link :to="item.link" class="text-white no-underline hover:text-gray-400" @click="handleLinkClick" replace="">
             <span>{{ item.title }}</span>
           </router-link>
         </template>
@@ -59,6 +61,7 @@
 
 <script setup>
 import {onMounted, onUnmounted, ref} from 'vue';
+import HomePage from '@/pages/HomePage.vue';
 
 const menuData = ref([
   {
@@ -99,6 +102,11 @@ const handleResize = () =>{
   if(window.innerWidth >= 768){
     isMenuOpen.value = false;
   }
+}
+
+const handleLinkClick = () =>{
+  console.log('linked')
+  isMenuOpen.value = false;
 }
 // Add handle
 onMounted(()=>{
