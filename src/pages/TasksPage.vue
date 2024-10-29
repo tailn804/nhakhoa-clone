@@ -1,14 +1,16 @@
 <template>
-   <main class="w-full bg-white ">
-        <div class=" mx-auto sm:px-12 py-[72px] sm:max-w-[1280px] w-[392px]  ">
-            <font-awesome-icon class="text-[32px] block" :icon="['fas', 'hammer']" />
+   <main class="sm:w-full mx-auto flex flex-col justify-center items-center  bg-white w-[392px] ">
+        <div class=" sm:mx-auto sm:px-12 py-[72px] sm:max-w-[1280px]  ">
+            <div>
+                <font-awesome-icon class="text-left text-[32px] " :icon="['fas', 'hammer']" />
+            </div>
             <span class="font-bold text-[28px] sm:text-[32px] block my-2" >
                 Tasks.co
             </span>
             <span class="text-2xl block leading-10">
                 Work Assignments
             </span>
-           <div class="grid grid-cols-3 leading-8">
+           <div class="sm:grid sm:grid-cols-3 leading-8">
             <span class="mt-2 text-[20px] block col-span-2 ">
                 Make sure things get done around the office and keep track of who is responsible. This is a sample task type page for sites and everything is drag and drop so you can quickly reorganize.
             </span>
@@ -57,8 +59,8 @@
         
    </main>
 
-   <div class=" bg-[#f9f9f9]">
-            <div class="mx-auto sm:px-12 py-[72px] sm:max-w-[1280px] w-[392px] flex flex-col justify-center ">
+   <div class="sm:w-full mx-auto w-[392px]  flex flex-col justify-center items-center  bg-[#f9f9f9] ">
+            <div class=" w-full sm:mx-auto sm:px-12 py-[72px] sm:max-w-[1280px]">
                 <div class="text-2xl">
                     <font-awesome-icon class="mr-2 " :icon="['fas', 'file']" />
                     <span >Archive of Tasks</span>

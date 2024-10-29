@@ -6,7 +6,7 @@
     </div>
 
     <!-- Content -->
-    <div class=" grid grid-cols-1 sm:px-24 w-[392px] mx-auto bg-white">
+    <div class=" grid sm:w-full grid-cols-1 sm:px-24 w-[392px] mx-auto bg-white">
         <!-- Logo -->
         <div class="text-[32px]">
             <font-awesome-icon class=" text-[#1C1C1C]" :icon="['fas', 'book']" />
@@ -86,7 +86,7 @@
     </div>
 
     <div class="py-[84px] sm:px-24 sm:grid sm:grid-cols-3 flex flex-col justify-center items-center    bg-[#f9f9f9]">
-        <div class="col-span-2 sm:pr-6 leading-8 w-[392px]">
+        <div class="sm:w-full col-span-2 sm:pr-6 leading-8 w-[392px]">
             <span class="text-2xl block">
                 Wider Page Content Block
             </span>
@@ -105,8 +105,9 @@
         </div>    
     </div>
 
-    <div class="sm:px-24 flex flex-col justify-center items-center  pb-[76px] bg-[#f9f9f9] ">   
-            <div class="sm:w-[783px] sm:h-[407px] w-[392px] h-[304px] border-dashed border-2 border-[#e0e0e0] bg-[#f1f1f1]"></div>
+    <div class="sm:w-full sm:px-24  flex flex-col justify-center items-center  pb-[76px] bg-[#f9f9f9] ">   
+            <div class="w-[392px]">
+                <div class="sm:w-[783px] sm:h-[407px]  h-[304px] border-dashed border-2 border-[#e0e0e0] bg-[#f1f1f1]"></div>
             <div class="sm:w-[783px] px-2 pt-10">
                 <span class="mt-2 block text-[19px]">
                 In June 2016, Google introduced a complete rebuild of the Google Sites platform, named the New Google Sites,[6][7] along with transition schedule from Classic Google Sites.[8] The new Google Sites does not use JotSpot technology.
@@ -114,6 +115,7 @@
             <span class="mt-2 block text-[19px]">
                 In August 2020, the new Google Sites became the default option for website creation, while in November 2021, all websites made with classic Google Sites were archived.[9]
             </span>
+            </div>
             </div>
     </div>
 </template>
