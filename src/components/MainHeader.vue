@@ -34,19 +34,24 @@
     </div>     
   </div>
 
+  <!-- Over lay Input Search -->
   <div v-if="showSearch" @click="toggleSearch" class="fixed  inset-0 bg-black opacity-40  flex justify-center items-center">
   </div>
+  <!-- SideBar Search -->
   <div v-if="showSearch">
-      <div class=" fixed justify-center top-0 left-0 right-0 flex bg-[#eeeeee] z-30 py-[14px] shadow-lg w-full ">
-        <button class="w-[48px] h-[48px]" @click="toggleSearch">
+      <div class="  fixed justify-center top-0 left-0 right-0 flex bg-[#eeeeee] z-30 py-[14px] shadow-lg w-full ">
+        <button v-if="!isMobile" class="w-[48px] h-[48px]" @click="toggleSearch">
           <font-awesome-icon class="ml-5 w-[18px] h-[18px] font-thin" :icon="['fas', 'arrow-left']" />
         </button>
-      <div class="flex justify-center items-center mx-auto w-full ">
+      <div class=" w-[414px] flex justify-center items-center mx-auto sm:w-full ">
         <div class=" flex w-[683px]  bg-white rounded">
-          <button class=" h-[48px] w-[48px] ">
+          <button  v-if="isMobile" class="w-[48px] h-[48px]" @click="toggleSearch">
+          <font-awesome-icon class="ml-5 w-[18px] h-[18px] font-thin" :icon="['fas', 'arrow-left']" />
+        </button>
+          <button v-else class=" h-[48px] w-[48px] ">
             <font-awesome-icon  :icon="['fas', 'magnifying-glass']" />
           </button>
-          <input ref="searchInput" v-model="searchQuery" placeholder="Search this site" class=" pl-3 w-full p2 text-base outline-none" type="search"/>
+          <input ref="searchInput" v-model="searchQuery" placeholder="Search this site" class="rounded pl-3 w-full p2 text-base outline-none" type="search"/>
         </div>
 
       </div>
@@ -62,7 +67,7 @@
     
   </div>
   <!-- Sidebar move slide left -->
-  <div class="fixed top-0 left-0 w-[200px] h-full bg-[#1C1C1C] p-5 transform transition-transform ease-in-out duration-500"
+  <div class=" fixed top-0 left-0 w-[200px] h-full bg-[#1C1C1C] p-5 transform transition-transform ease-in-out duration-500"
     :class="{'-translate-x-full' : !isMenuOpen, 'translate-x-0' : isMenuOpen}"
     >
       <button @click="toggleMenu" class=" text-white text-2xl mb-4 ">
@@ -114,15 +119,18 @@ const menuData = ref([
 ])
 // Status close / open Menu
 const isMenuOpen = ref(false);
+
+// Variable check mobile
+const isMobile = ref(window.innerWidth <= 768)
+
 // Manage Status 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 }
 // Check size window
 const handleResize = () =>{
-  if(window.innerWidth >= 768){
-    isMenuOpen.value = false;
-  }
+  isMenuOpen.value = window.innerWidth >= 768? false : isMenuOpen.value;
+  isMobile.value = window.innerWidth <= 768;
 }
 
 const handleLinkClick = () =>{
