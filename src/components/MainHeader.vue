@@ -43,7 +43,7 @@
         <button v-if="!isMobile" class="w-[48px] h-[48px]" @click="toggleSearch">
           <font-awesome-icon class="ml-5 w-[18px] h-[18px] font-thin" :icon="['fas', 'arrow-left']" />
         </button>
-      <div class=" w-[90%] flex justify-center items-center mx-auto sm:w-full ">
+      <div class=" flex justify-center items-center mx-auto sm:w-full ">
         <div class=" flex w-[683px]  bg-white rounded">
           <button  v-if="isMobile" class="w-[48px] h-[48px]" @click="toggleSearch">
           <font-awesome-icon class="ml-5 w-[18px] h-[18px] font-thin" :icon="['fas', 'arrow-left']" />
