@@ -14,9 +14,20 @@ body {
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
   background: white;
+  border-style: none;
 
   @media (max-width: 1024px) {
     height: 100%;
     font-size: 14px;
   }
 }
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    border-width: 0; /* Đảm bảo không có độ dày viền */
+    border-style: none; /* Ghi đè border-style thành none */
+    border-color: #e5e7eb; /* Màu viền nếu cần */
+}
+

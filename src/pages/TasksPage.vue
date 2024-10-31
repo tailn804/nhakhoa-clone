@@ -85,7 +85,7 @@
                     </span>
                 </div>
             </div>
-        </div>
+    </div>
 </template>
 <script setup>
 import { icon } from '@fortawesome/fontawesome-svg-core';

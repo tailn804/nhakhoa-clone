@@ -6,7 +6,7 @@
     </div>
 
     <!-- Content -->
-    <div class=" grid sm:w-full grid-cols-1 sm:px-24 w-[392px] pt-[72px] mx-auto bg-white">
+    <div class=" grid sm:w-full grid-cols-1 sm:px-24 w-[392px] pt-[72px] mx-auto">
         <!-- Logo -->
         <div class="text-[32px]">
             <font-awesome-icon class=" text-[#1C1C1C]" :icon="['fas', 'book']" />
@@ -21,7 +21,7 @@
             <div class="text-[19px]">Set up your teams for success and foster collaboration.</div>
         </div>
 
-        <div class="sm:flex justify-between text-center pt-[62px] ">
+        <div class="sm:flex flex-col justify-between text-center pt-[62px] ">
             <div class=" flex flex-col py-4" v-for="item in listDataIcon" :key="item.id">
                 <font-awesome-icon class="text-[40px]" :icon="item.icon" />
                 <span class="mt-2 text-[19px]">
@@ -119,6 +119,9 @@
             </div>
     </div>
 </template>
+<style >
+
+</style>
 <script setup>
 import { icon } from '@fortawesome/fontawesome-svg-core';
 import { ref } from 'vue';

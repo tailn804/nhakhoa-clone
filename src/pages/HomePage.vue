@@ -24,7 +24,7 @@
       <!-- Content -->
       <div class="sm:grid sm:grid-cols-2 sm:px-2 mt-10 py-3 w-full flex flex-col justify-center items-center">
         <div class="sm:w-full w-[276px]" v-for="category in dataCategories" :key="category.id">
-          <div class="border-b border-black py-2 sm:w-[75%]">
+          <div class="border-bottom py-2 sm:w-[75%]">
             <span class="leading-8 font-bold text-lg">
             {{ category.title }}
           </span>
@@ -160,4 +160,11 @@ const props = defineProps({
 </script>
 
 <style scoped>
+.border-bottom{
+  border-bottom: 1px solid black;
+}
+.no-border{
+  border-style: none;
+  border-width: 0;
+}
 </style>
