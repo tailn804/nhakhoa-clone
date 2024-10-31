@@ -1,8 +1,8 @@
 
 <template>
   
-    <MainHeader class="pt-[68px]" />
-    <div class="h-[68px]"></div>
+    <MainHeader class="pt-[56px]" />
+  
     <div>
       <RouterView />
     </div>

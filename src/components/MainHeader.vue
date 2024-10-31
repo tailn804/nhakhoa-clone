@@ -1,7 +1,7 @@
 <template>
-  <div v-if="!isMenuOpen" class="w-full fixed z-30 bg-[#1C1C1C]">
+  <div v-if="!isMenuOpen" class="w-full h-[56px] flex  items-center fixed z-30 bg-[#1C1C1C]">
 
-    <div class="flex justify-between items-center p-5 text-white text-xl ">
+    <div class="flex justify-between items-center px-5 w-full text-white text-xl ">
       <div class="flex items-center gap-4 ">
 
         <!-- Button Menu Mobile -->
@@ -29,9 +29,29 @@
             </template>
           </div>
           <!-- Button Search -->
-          <button> <font-awesome-icon :icon="['fas', 'magnifying-glass']" /></button>
+          <button @click="toggleSearch"> <font-awesome-icon class="text-[18px]" :icon="['fas', 'magnifying-glass']" /></button>
       </div>
     </div>     
+  </div>
+
+  <div v-if="showSearch" @click="toggleSearch" class="fixed  inset-0 bg-black opacity-40  flex justify-center items-center">
+  </div>
+  <div v-if="showSearch">
+      <div class=" fixed justify-center top-0 left-0 right-0 flex bg-[#eeeeee] z-30 py-[14px] shadow-lg w-full ">
+        <button class="w-[48px] h-[48px]" @click="toggleSearch">
+          <font-awesome-icon class="ml-5 w-[18px] h-[18px] font-thin" :icon="['fas', 'arrow-left']" />
+        </button>
+      <div class="flex justify-center items-center mx-auto w-full ">
+        <div class=" flex w-[683px]  bg-white rounded">
+          <button class=" h-[48px] w-[48px] ">
+            <font-awesome-icon  :icon="['fas', 'magnifying-glass']" />
+          </button>
+          <input ref="searchInput" v-model="searchQuery" placeholder="Search this site" class=" pl-3 w-full p2 text-base outline-none" type="search"/>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 
   <!-- Sidebar Overlay -->
@@ -60,8 +80,9 @@
 </template>
 
 <script setup>
-import {onMounted, onUnmounted, ref} from 'vue';
+import {nextTick, onMounted, onUnmounted, ref} from 'vue';
 import HomePage from '@/pages/HomePage.vue';
+import { Input, Button } from 'ant-design-vue';
 
 const menuData = ref([
   {
@@ -116,5 +137,24 @@ onMounted(()=>{
 onUnmounted(() => {
   window.removeEventListener('resize',handleResize);
 })
+
+const showSearch = ref(false)
+const searchQuery = ref('')
+const searchInput = ref(null)
+
+const toggleSearch = ()=>{
+  showSearch.value = !showSearch.value
+  if(showSearch.value){
+    nextTick(()=>{
+      searchInput.value?.focus()
+    })
+  }
+}
+
+const handleSearch = () =>{
+  console.log("Searching " , searchQuery.value)
+  showSearch.value = false
+  
+}
 
 </script>

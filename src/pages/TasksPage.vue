@@ -1,5 +1,5 @@
 <template>
-   <main class="sm:w-full mx-auto flex flex-col justify-center items-center  bg-white w-[392px] ">
+   <main class="sm:w-full pt-[72px] mx-auto flex flex-col justify-center items-center  bg-white w-[392px] ">
         <div class=" sm:mx-auto sm:px-12 py-[72px] sm:max-w-[1280px]  ">
             <div>
                 <font-awesome-icon class="text-left text-[32px] " :icon="['fas', 'hammer']" />

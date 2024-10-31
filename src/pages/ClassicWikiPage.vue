@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-auto bg-white pb-12 grid grid-cols-1" >
+    <div class="w-full pt-[72px] h-auto bg-white pb-12 grid grid-cols-1" >
       <div class="sm:max-w-3xl mx-auto container flex flex-col justify-center items-center py-4 pt-16 ">
         <div class="sm:px-2 sm:py-3 sm:w-full w-[392px] " >
           <div class="">

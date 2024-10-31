@@ -1,12 +1,12 @@
 <template>
 
     <!-- Banner -->
-    <div class="relative h-[250px] w-full sm:h-[370px] z-20 overflow-hidden bg-white">
-        <img class="absolute w-full h-full object-cover bg-center bg-no-repeat -z-10 sm:top-[-60px] top-[-60px] " src="/src/assets/images/Page.jpg" alt="">
+    <div class=" h-[250px] w-full sm:h-[370px]  overflow-hidden bg-white">
+        <img class=" w-full h-full object-cover bg-center bg-no-repeat   " src="/src/assets/images/Page.jpg" alt="">
     </div>
 
     <!-- Content -->
-    <div class=" grid sm:w-full grid-cols-1 sm:px-24 w-[392px] mx-auto bg-white">
+    <div class=" grid sm:w-full grid-cols-1 sm:px-24 w-[392px] pt-[72px] mx-auto bg-white">
         <!-- Logo -->
         <div class="text-[32px]">
             <font-awesome-icon class=" text-[#1C1C1C]" :icon="['fas', 'book']" />
@@ -106,7 +106,7 @@
     </div>
 
     <div class="sm:w-full sm:px-24  flex flex-col justify-center items-center  pb-[76px] bg-[#f9f9f9] ">   
-            <div class="w-[392px]">
+            <div class="sm:w-full w-[392px]">
                 <div class="sm:w-[783px] sm:h-[407px]  h-[304px] border-dashed border-2 border-[#e0e0e0] bg-[#f1f1f1]"></div>
             <div class="sm:w-[783px] px-2 pt-10">
                 <span class="mt-2 block text-[19px]">

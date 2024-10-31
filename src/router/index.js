@@ -28,7 +28,10 @@ const router = createRouter({
             name: 'tasks',
             component: () => import("@/pages/TasksPage.vue"),
         }
-    ]
+    ],
+    scrollBehavior(){
+        return{top: 0};
+    }
 });
 
 export default router
