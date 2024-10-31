@@ -6,7 +6,7 @@
     </div>
 
     <!-- Content -->
-    <div class=" grid sm:w-full grid-cols-1 sm:px-24 w-[392px] pt-[72px] mx-auto">
+    <div class=" grid sm:w-full grid-cols-1 sm:px-24 w-[90%] pt-[72px] mx-auto">
         <!-- Logo -->
         <div class="text-[32px]">
             <font-awesome-icon class=" text-[#1C1C1C]" :icon="['fas', 'book']" />
@@ -21,7 +21,7 @@
             <div class="text-[19px]">Set up your teams for success and foster collaboration.</div>
         </div>
 
-        <div class="sm:flex flex-col justify-between text-center pt-[62px] ">
+        <div class="sm:flex  justify-between text-center pt-[62px] ">
             <div class=" flex flex-col py-4" v-for="item in listDataIcon" :key="item.id">
                 <font-awesome-icon class="text-[40px]" :icon="item.icon" />
                 <span class="mt-2 text-[19px]">
@@ -86,7 +86,7 @@
     </div>
 
     <div class="py-[84px] sm:px-24 sm:grid sm:grid-cols-3 flex flex-col justify-center items-center    bg-[#f9f9f9]">
-        <div class="sm:w-full col-span-2 sm:pr-6 leading-8 w-[392px]">
+        <div class="sm:w-full col-span-2 sm:pr-6 leading-8 w-[90%]">
             <span class="text-2xl block">
                 Wider Page Content Block
             </span>
@@ -97,8 +97,8 @@
                 In February 2006, JotSpot was named part of Business 2.0, "Next Net 25",[1] and in May 2006, it was honored as one of InfoWorld's "15 Start-ups to Watch".[2] In October 2006, JotSpot was acquired by Google.[3] Google announced a prolonged data transition of webpages created using Google Page Creator (also known as "Google Pages") to Google Sites servers in 2007. On February 28, 2008, Google Sites was unveiled using the JotSpot technology.[4] The service was free, but users needed a domain name, which Google offered for $10. However, as of May 21, 2008, Google Sites became available for free, separately from Google Apps, and without the need for a domain.[5]
             </span>
         </div>
-        <div class="mt-14">
-            <div class="sm:w-[380px] sm:h-[300px] h-[204px] w-[392px] border-dashed border-2 border-[#e0e0e0] bg-[#f1f1f1]"></div>
+        <div class="mt-14 w-full flex flex-col justify-center items-center">
+            <div class="sm:w-[380px] sm:h-[300px] h-[204px] w-[90%] border-dashed border-2 border-[#e0e0e0] bg-[#f1f1f1]"></div>
             <span class="px-2 py-3 block text-center text-[16px]">
                 Side image small text caption description
             </span>
@@ -106,7 +106,7 @@
     </div>
 
     <div class="sm:w-full sm:px-24  flex flex-col justify-center items-center  pb-[76px] bg-[#f9f9f9] ">   
-            <div class="sm:w-full w-[392px]">
+            <div class="sm:w-full w-[90%]">
                 <div class="sm:w-[783px] sm:h-[407px]  h-[304px] border-dashed border-2 border-[#e0e0e0] bg-[#f1f1f1]"></div>
             <div class="sm:w-[783px] px-2 pt-10">
                 <span class="mt-2 block text-[19px]">

@@ -1,5 +1,5 @@
 <template>
-   <main class="sm:w-full pt-[72px] mx-auto flex flex-col justify-center items-center  bg-white w-[392px] ">
+   <main class="sm:w-full pt-[72px] mx-auto flex flex-col justify-center items-center  bg-white w-[90%] ">
         <div class=" sm:mx-auto sm:px-12 py-[72px] sm:max-w-[1280px]  ">
             <div>
                 <font-awesome-icon class="text-left text-[32px] " :icon="['fas', 'hammer']" />
@@ -60,7 +60,7 @@
    </main>
 
    <div class="sm:w-full mx-auto ] flex flex-col justify-center items-center  bg-[#f9f9f9] ">
-            <div class=" w-[392px] sm:mx-auto sm:px-12 py-[72px] sm:max-w-[1280px]">
+            <div class=" w-[90%] sm:mx-auto sm:px-12 py-[72px] sm:max-w-[1280px]">
                 <div class="text-2xl">
                     <font-awesome-icon class="mr-2 " :icon="['fas', 'file']" />
                     <span >Archive of Tasks</span>
