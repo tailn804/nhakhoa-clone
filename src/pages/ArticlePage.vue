@@ -15,7 +15,7 @@
                         Spaces
                     </span>
                 </div>
-                <div class="mt-2 text-lg">
+                <div class="mt-2 text-[19px] text-left ">
                     <span>
                         Have you explored Google Spaces for internal communications? Set up your teams for success and foster collaboration.
                     </span>
@@ -24,7 +24,7 @@
             <div class="h-7"></div>
             <div class="sm:w-full">
                 <div class=" my-4">
-                    <img class=" w-full sm:h-[250px] bg-contain" src="/src/assets/images/Space.png" alt="">
+                    <img class=" w-[392px] h-[143px] sm:h-[250px] bg-contain" src="/src/assets/images/Space.png" alt="">
                 </div>
                 <div class="h-5"></div>
                 <div class="px-2 py-3 sm:w-full w-[392px] ">

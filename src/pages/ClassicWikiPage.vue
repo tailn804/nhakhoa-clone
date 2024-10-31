@@ -21,7 +21,7 @@
   
         <div class="sm:grid sm:grid-cols-2 flex flex-col justify-center items-center  px-2 mt-10 py-3 w-full">
           <div class="sm:w-full w-[272px]"  v-for="category in dataCategories" :key="category.id">
-            <div class="border-b border-black py-2 sm:w-[75%]">
+            <div class="border-bottom py-2 sm:w-[75%]">
               <span class="leading-8 font-bold text-lg">
               {{ category.title }}
             </span>
@@ -147,4 +147,7 @@
   </script>
   
   <style scoped>
-  </style>
+.border-bottom{
+  border-bottom: 1px solid black;
+}
+</style>

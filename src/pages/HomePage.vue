@@ -163,8 +163,4 @@ const props = defineProps({
 .border-bottom{
   border-bottom: 1px solid black;
 }
-.no-border{
-  border-style: none;
-  border-width: 0;
-}
 </style>

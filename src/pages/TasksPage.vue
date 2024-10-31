@@ -59,8 +59,8 @@
         
    </main>
 
-   <div class="sm:w-full mx-auto ]  flex flex-col justify-center items-center  bg-[#f9f9f9] ">
-            <div class=" w-[392px]  sm:mx-auto sm:px-12 py-[72px] sm:max-w-[1280px]">
+   <div class="sm:w-full mx-auto ] flex flex-col justify-center items-center  bg-[#f9f9f9] ">
+            <div class=" w-[392px] sm:mx-auto sm:px-12 py-[72px] sm:max-w-[1280px]">
                 <div class="text-2xl">
                     <font-awesome-icon class="mr-2 " :icon="['fas', 'file']" />
                     <span >Archive of Tasks</span>
