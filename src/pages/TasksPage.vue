@@ -19,7 +19,7 @@
             <div class="grid sm:grid-cols-3 grid-cols-1 gap-x-4 pt-[72px] ">
                 <div class="" v-for="item in listData" :key="item.id">
                     <div class="pt-5 pb-6"  >
-                        <font-awesome-icon class="text-[22px] pr-1" :style="{backgroundColor: item.bgColor}" :icon="item.img" />
+                        <font-awesome-icon class="text-[23px] pr-1" :style="{backgroundColor: item.bgColor}" :icon="item.img" />
                         <span class="text-[20px]" :style="{backgroundColor: item.bgColor}">{{ item.name }}</span>
                     </div>
                     
