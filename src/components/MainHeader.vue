@@ -23,7 +23,7 @@
         <!-- Item Menu Hidden  -->
         <div class="hidden sm:flex flex-row gap-5 justify-center items-center">
             <template v-for="item in menuData" :key="item.id">
-              <router-link :to="item.link" class="text-white no-underline hover:text-gray-400">
+              <router-link :to="item.link" @click="setActiveItem(item.id)" class="text-white no-underline hover:text-gray-400" :class="{'font-bold': activeItem === item.id}">
                 <span>{{item.title}}</span>
               </router-link>
             </template>
@@ -76,7 +76,7 @@
 
       <div class="flex flex-col gap-4">
         <template v-for="item in menuData" :key="item.id">
-          <router-link :to="item.link" class="text-white no-underline hover:text-gray-400" @click="handleLinkClick" replace="">
+          <router-link :to="item.link" class="text-white no-underline hover:text-gray-400" @click.native=" handleLinkClick" replace="" >
             <span>{{ item.title }}</span>
           </router-link>
         </template>
@@ -88,6 +88,7 @@
 import {nextTick, onMounted, onUnmounted, ref} from 'vue';
 import HomePage from '@/pages/HomePage.vue';
 import { Input, Button } from 'ant-design-vue';
+import { Item } from 'ant-design-vue/es/menu';
 
 const menuData = ref([
   {
@@ -162,7 +163,27 @@ const toggleSearch = ()=>{
 const handleSearch = () =>{
   console.log("Searching " , searchQuery.value)
   showSearch.value = false
-  
 }
 
+// Create Variable Activeitem
+const activeItem = ref();
+
+function setActiveItem(id){
+  activeItem.value = id;
+  console.log('Active item set to: ', activeItem.value)
+}
+
+function handleMenuItemClick(id){
+  setActiveItem(id);
+  console.log('Clicked itemid', id);
+  console.log('active item: ' , activeItem.value)
+  handleLinkClick();
+}
 </script>
+
+<style scoped>
+.active-link{
+  font-weight: bold !important;
+  color: aqua;
+}
+</style>
