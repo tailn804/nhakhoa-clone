@@ -5,14 +5,14 @@ body,
   height: 100%;
   position: relative;
   background: white;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Noto Sans";
   color: #000;
 }
 
 body {
   font-size: 16px;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Noto Sans";
   background: white;
   border-style: none;
 

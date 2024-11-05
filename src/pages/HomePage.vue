@@ -1,20 +1,21 @@
 <template>
-  <div class=" h-full pt-[72px] sm:h-auto bg-white pb-12 grid grid-cols-1 sm:px-4  w-full " >
+  <div class="h-full pt-[72px] sm:h-auto bg-white pb-12 grid grid-cols-1 sm:px-4 w-full " >
     <div class="sm:max-w-3xl mx-auto container flex flex-col justify-center items-center pt-16 ">
       <div class="sm:px-2 sm:py-3 w-[90%] sm:w-full " >
         <!-- About -->
         <div>
-          <font-awesome-icon class="text-3xl" :icon="['fas', 'book']" />
+          <i style="font-family: 'Noto Emoji', Arial; font-weight: 700;"></i>
+          <!-- <font-awesome-icon class="text-3xl" :icon="['fas', 'book']" /> -->
           <!-- <span class="font-sans text-3xl">📚</span> -->
         </div>
-        <div class="mt-2">
-          <span class="font-bold text-3xl">Sites.wiki</span>
+        <div class="mt-2 ">
+          <span style="color: rgba(47, 47, 47, 1);" class="font-bold text-[24.0pt] ">Sites.wiki</span>
         </div>
         <div class="mt-2">
-          <span class="font-normal text-2xl">About</span>
+          <span style="color: rgba(47, 47, 47, 1);" class="font-normal text-[18.0pt]">About</span>
         </div>
         <div class="mt-2">
-          <span class=" text-lg">
+          <span style="color: rgba(47, 47, 47, 1);" class=" text-lg">
             Minimalist wiki template powered by Google Sites for your company <br> 
             intranet included in Google Workspace.
           </span>
@@ -23,17 +24,17 @@
 
       <!-- Content -->
       <div class="sm:grid sm:grid-cols-2 sm:px-2 mt-10 py-3 w-full flex flex-col justify-center items-center">
-        <div class="sm:w-full w-[276px]" v-for="category in dataCategories" :key="category.id">
+        <div class="sm:w-full w-[276px] top-0" v-for="category in dataCategories" :key="category.id">
           <div class="border-bottom py-2 sm:w-[75%]">
-            <span class="leading-8 font-bold text-lg">
+            <span style="color: rgba(47, 47, 47, 1);" class="leading-8 font-bold text-[14.0pt]">
             {{ category.title }}
-          </span>
+            </span>
           </div>
           <div class="py-[14px] px-2">
             <div class="my-3" v-for="item in category.items" :key="item.name">
-            <router-link class="text-xl" :to="item.url">
+            <router-link class="text-[14.0pt]" :to="item.url">
               <font-awesome-icon class="mr-2" :icon="item.icon" />
-              <span class="text-lg">{{ item.name }}</span>
+              <span style="color: rgba(28, 28, 28, 1);">{{ item.name }}</span>
             </router-link>
           </div>
           </div>
@@ -155,7 +156,6 @@ const props = defineProps({
     ]
     },
   ])
-
   
 </script>
 

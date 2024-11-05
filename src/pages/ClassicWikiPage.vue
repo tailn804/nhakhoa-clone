@@ -3,13 +3,13 @@
       <div class="sm:max-w-3xl mx-auto container flex flex-col justify-center items-center py-4 pt-16 ">
         <div class="sm:px-2 sm:py-3 sm:w-full w-[90%] " >
           <div class="">
-            <span class="font-sans text-3xl">📚</span>
+            <span class="font-sans text-[24.0pt]">📚</span>
           </div>
           <div class="mt-2">
-            <span class="font-bold text-3xl">Sites.wiki</span>
+            <span class="font-bold text-[24.0pt]">Sites.wiki</span>
           </div>
           <div class="mt-2">
-            <span class="font-normal text-2xl">About</span>
+            <span class="font-normal text-[18.0pt]">About</span>
           </div>
           <div class="mt-2">
             <span class="text-lg">
@@ -22,15 +22,15 @@
         <div class="sm:grid sm:grid-cols-2 flex flex-col justify-center items-center  px-2 mt-10 py-3 w-full">
           <div class="sm:w-full w-[272px]"  v-for="category in dataCategories" :key="category.id">
             <div class="border-bottom py-2 sm:w-[75%]">
-              <span class="leading-8 font-bold text-lg">
+              <span style="color: rgba(47, 47, 47, 1);" class="leading-8 font-bold text-[14.0pt]">
               {{ category.title }}
             </span>
             </div>
             <div class="py-[14px] px-2">
               <div class="my-3" v-for="item in category.items" :key="item.name">
-              <router-link class="text-xl" :to="item.url">
+              <router-link class="text-[14.0pt]" :to="item.url">
                 <span class="mr-2">{{ item.icon }}</span>
-                <span class="text-lg">{{ item.name }}</span>
+                <span style="color: rgba(28, 28, 28, 1);">{{ item.name }}</span>
               </router-link>
             </div>
             </div>
