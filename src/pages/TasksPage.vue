@@ -2,9 +2,10 @@
    <main style="color: rgba(47, 47, 47, 1);" class="sm:w-full pt-[72px] mx-auto flex flex-col justify-center items-center  bg-white w-[90%] ">
         <div class=" sm:mx-auto sm:px-12 py-[72px] sm:max-w-[1280px]  ">
             <div>
-                <font-awesome-icon class="text-left text-[24.0pt]] " :icon="['fas', 'hammer']" />
+                <span style="font-family: 'Noto Emoji', Arial;font-weight: 700; color: rgba(47, 47, 47, 1);" class="text-[24.0pt]">🔨</span>
+                <!-- <font-awesome-icon class="text-left text-[24.0pt]] " :icon="['fas', 'hammer']" /> -->
             </div>
-            <span class="font-bold text-[28px] sm:text-[24.0pt] block my-2" >
+            <span class="font-bold text-[28px] sm:text-[24.0pt] block " >
                 Tasks.co
             </span>
             <span class="text-[18.0pt] block leading-10">
@@ -19,7 +20,8 @@
             <div class="grid sm:grid-cols-3 grid-cols-1 gap-x-4 pt-[72px] ">
                 <div class="" v-for="item in listData" :key="item.id">
                     <div class="pt-5 pb-6"  >
-                        <font-awesome-icon class="text-[16.0pt] pr-1" :style="{backgroundColor: item.bgColor}" :icon="item.img" />
+                        <span  style="font-family: 'Noto Emoji', Arial;font-weight: 700; color: rgba(47, 47, 47, 1);" class="text-[16.0pt] pr-1" :style="{backgroundColor: item.bgColor}">{{ item.img }}</span>
+                        <!-- <font-awesome-icon class="text-[16.0pt] pr-1" :style="{backgroundColor: item.bgColor}" :icon="item.img" /> -->
                         <span class="font-bold text-[14.0pt]" :style="{backgroundColor: item.bgColor}">{{ item.name }}</span>
                     </div>
                     
@@ -28,7 +30,8 @@
                     </span>
 
                     <div class="mt-2 text-[20px]  font-sans">
-                        <font-awesome-icon class="mr-2" :icon="item.icon" />
+                        <span style="font-family: 'Noto Emoji', Arial;font-weight: 700; color: rgba(47, 47, 47, 1);">{{ item.icon }}</span>
+                        <!-- <font-awesome-icon class="mr-2" :icon="item.icon" /> -->
                         <span>{{ item.subtitle }}</span>
                     </div>
 
@@ -46,7 +49,8 @@
                     </span>
 
                     <div class="mt-2 text-[20px]  font-sans">
-                        <font-awesome-icon class="mr-2" :icon="item.icon" />
+                        <span style="font-family: 'Noto Emoji', Arial;font-weight: 700; color: rgba(47, 47, 47, 1);">{{ item.icon }}</span>
+                        <!-- <font-awesome-icon class="mr-2" :icon="item.icon" /> -->
                         <span>{{ item.subtitle }}</span>
                     </div>
 
@@ -62,7 +66,8 @@
    <div style="color: rgba(47, 47, 47, 1);" class="sm:w-full mx-auto ] flex flex-col justify-center items-center  bg-[#f9f9f9] ">
             <div class=" w-[90%] sm:mx-auto sm:px-12 py-[72px] sm:max-w-[1280px]">
                 <div class="text-[18.0pt]">
-                    <font-awesome-icon class="mr-2 " :icon="['fas', 'file']" />
+                    <span style="font-family: 'Noto Emoji', Arial;font-weight: 700; color: rgba(47, 47, 47, 1);"class="mr-2 ">🗃️</span>
+                    <!-- <font-awesome-icon class="mr-2 " :icon="['fas', 'file']" /> -->
                     <span >Archive of Tasks</span>
                 </div>
 
@@ -76,7 +81,8 @@
                     </span>
 
                     <div class="mt-2 text-[14.0pt] font-normal block">
-                        <font-awesome-icon class="mr-2" :icon="item.icon" />
+                        <span style="font-family: 'Noto Emoji', Arial;font-weight: 700; color: rgba(47, 47, 47, 1);">{{ item.icon }}</span>
+                        <!-- <font-awesome-icon class="mr-2" :icon="item.icon" /> -->
                         <span>{{ item.subtitle }}</span>
                     </div>
 
@@ -97,36 +103,36 @@ const listData = ref([
         bgColor: '#f4cccc',
         name:'Not Started',
         title:'Task Title Write Job Descriptions',
-        icon:['fas', 'person'],
+        icon:'🙋',
         subtitle:'Bill Trask',
         text:'If you need a description of the tasks go ahead and write something here or link out.',
-        img:['fas', 'stop'],
+        img:'🛑',
     },
     {
         id:2,
         bgColor: '#fff2cc',
         name:'In Progress',
         title:'Task Title Write Job Descriptions',
-        icon: ['fas', 'person'],
+        icon: '🙋',
         subtitle:'Bill Trask',
         text:'If you need a description of the tasks go ahead and write something here or link out.',
-        img:['fas', 'user-nurse'],
+        img:'👷',
     },
     {
         id:3,
         bgColor: '#d9ead3',
         name:'Completed',
         title:'Task Title Write Job Descriptions',
-        icon:['fas', 'person'],
+        icon:'🙋',
         subtitle:'Bill Trask',
         text:'If you need a description of the tasks go ahead and write something here or link out.',
-        img:['fas', 'tree'],
+        img:'🌳',
     },
     {
         id:4,
         name:'',
         title:'Task Title Write Job Descriptions',
-        icon:['fas', 'person'],
+        icon:'🙋',
         subtitle:'Bill Trask',
         text:'If you need a description of the tasks go ahead and write something here or link out.'
     },
@@ -134,7 +140,7 @@ const listData = ref([
         id:5,
         name:'',
         title:'Task Title Write Job Descriptions',
-        icon:['fas', 'person'],
+        icon:'🙋',
         subtitle:'Bill Trask',
         text:'If you need a description of the tasks go ahead and write something here or link out.'
     },
@@ -145,7 +151,7 @@ const listData1 = ref([
         id:6,
         name:'',
         title:'Task Title Write Job Descriptions',
-        icon:['fas', 'person'],
+        icon:'🙋',
         subtitle:'Bill Trask',
         text:'If you need a description of the tasks go ahead and write something here or link out.'
     },
@@ -156,7 +162,7 @@ const listData2 = ref([
         id:7,
         name:'',
         title:'Task Title Write Job Descriptions',
-        icon:['fas', 'person'],
+        icon:'🙋',
         subtitle:'Bill Trask',
         text:'If you need a description of the tasks go ahead and write something here or link out.'
     },
@@ -164,7 +170,7 @@ const listData2 = ref([
         id:8,
         name:'',
         title:'Task Title Write Job Descriptions',
-        icon:['fas', 'person'],
+        icon:'🙋',
         subtitle:'Bill Trask',
         text:'If you need a description of the tasks go ahead and write something here or link out.'
     },

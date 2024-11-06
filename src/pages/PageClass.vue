@@ -9,7 +9,8 @@
     <div style="color: rgba(47, 47, 47, 1);" class=" grid sm:w-full grid-cols-1 sm:px-24 w-[90%] pt-[72px] mx-auto">
         <!-- Logo -->
         <div class="text-[24.0pt]">
-            <font-awesome-icon class=" text-[#1C1C1C]" :icon="['fas', 'book']" />
+            <span style="font-family: 'Noto Emoji', Arial;font-weight: 700; color: rgba(47, 47, 47, 1);" class="text-[24.0pt]">📚</span>
+            <!-- <font-awesome-icon class=" text-[#1C1C1C]" :icon="['fas', 'book']" /> -->
             <span class="font-bold">
                 Wiki/Page
             </span>
@@ -23,7 +24,8 @@
 
         <div class="sm:flex  justify-between text-center pt-[62px] ">
             <div class=" flex flex-col py-4" v-for="item in listDataIcon" :key="item.id">
-                <font-awesome-icon class="text-[40px]" :icon="item.icon" />
+                <span style="font-family: 'Noto Emoji', Arial;font-weight: 700; color: rgba(47, 47, 47, 1);"  class="text-[40px]">{{ item.icon }}</span>
+                <!-- <font-awesome-icon class="text-[40px]" :icon="item.icon" /> -->
                 <span class="mt-2 text-[14.0pt]">
                     {{ item.title }}
                 </span>
@@ -85,8 +87,8 @@
         </div>
     </div>
 
-    <div style="color: rgba(47, 47, 47, 1);" class="py-[84px] sm:px-24 sm:grid sm:grid-cols-3 flex flex-col justify-center items-center    bg-[#f9f9f9]">
-        <div class="sm:w-full col-span-2 sm:pr-6 leading-8 w-[90%]">
+    <div style="color: rgba(47, 47, 47, 1);" class="py-[84px] sm:pl-24 sm:pr-[74.5px] sm:grid sm:grid-cols-3 flex flex-col justify-center items-center    bg-[#f9f9f9]">
+        <div class="sm:w-full col-span-2 sm:pr-4 leading-8 w-[90%]">
             <span class="text-[18.0pt] block">
                 Wider Page Content Block
             </span>
@@ -97,8 +99,9 @@
                 In February 2006, JotSpot was named part of Business 2.0, "Next Net 25",[1] and in May 2006, it was honored as one of InfoWorld's "15 Start-ups to Watch".[2] In October 2006, JotSpot was acquired by Google.[3] Google announced a prolonged data transition of webpages created using Google Page Creator (also known as "Google Pages") to Google Sites servers in 2007. On February 28, 2008, Google Sites was unveiled using the JotSpot technology.[4] The service was free, but users needed a domain name, which Google offered for $10. However, as of May 21, 2008, Google Sites became available for free, separately from Google Apps, and without the need for a domain.[5]
             </span>
         </div>
-        <div class="mt-14 w-full flex flex-col justify-center items-center">
-            <div class="sm:w-[380px] sm:h-[300px] h-[204px] w-[90%] border-dashed border-2 border-[#e0e0e0] bg-[#f1f1f1]"></div>
+        <div class=" h-full w-full flex flex-col  items-center">
+            <div class="h-[52px]"></div>
+            <div class="sm:w-[380px] sm:h-[300px] h-[204px] sm:ml-1 w-[90%] border-dashed border-2 border-[#e0e0e0] bg-[#f1f1f1]"></div>
             <span class="px-2 py-3 block text-center text-[16px]">
                 Side image small text caption description
             </span>
@@ -130,22 +133,22 @@ import { ref } from 'vue';
 const listDataIcon =ref([
     {
         id:1,
-        icon: ['far', 'folder-open'],
+        icon:'📂',
         title: 'Open Google Drive Folder',
     },
     {
         id:2,
-        icon: ['fas', 'film'],
+        icon: '🎞️',
         title: 'Watch a Tutorial Video',
     },
     {
         id:3,
-        icon:['fas', 'earth-americas'],
+        icon:'🌐',
         title: 'View Maps & Local Amenities',
     },
     {
         id:4,
-        icon: ['fas', 'egg'] ,
+        icon: '🐣' ,
         title: 'Learn How to Get Started',
     },
     

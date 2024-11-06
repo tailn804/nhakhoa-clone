@@ -1,7 +1,7 @@
 <template>
-  <div v-if="!isMenuOpen" class="w-full h-[56px] flex  items-center fixed z-30 bg-[#1C1C1C]">
+  <div v-if="!isMenuOpen" class="w-full  h-[56px] flex  items-center fixed z-30 bg-[#1C1C1C]">
 
-    <div class="flex justify-between items-center px-5 w-full text-white text-xl ">
+    <div class="flex text-font justify-between items-center px-5 w-full text-white text-xl ">
       <div class="flex items-center gap-4 ">
 
         <!-- Button Menu Mobile -->
@@ -11,7 +11,7 @@
           </button>
         </div>
         <!-- Logo -->
-        <div>
+        <div class="text-[15.0pt] px-3 py-4">
           <router-link to="/">
             <span>Sites.wiki</span>
           </router-link>
@@ -185,5 +185,9 @@ function handleMenuItemClick(id){
 .active-link{
   font-weight: bold !important;
   color: aqua;
+}
+
+.text-font{
+  font-size: 14.0pt;
 }
 </style>

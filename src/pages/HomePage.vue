@@ -1,14 +1,15 @@
 <template>
   <div class="h-full pt-[72px] sm:h-auto bg-white pb-12 grid grid-cols-1 sm:px-4 w-full " >
-    <div class="sm:max-w-3xl mx-auto container flex flex-col justify-center items-center pt-16 ">
+    <div class="h-12"></div>
+    <div class="sm:max-w-3xl mx-auto container flex flex-col justify-center items-center  ">
       <div class="sm:px-2 sm:py-3 w-[90%] sm:w-full " >
         <!-- About -->
         <div>
-          <i style="font-family: 'Noto Emoji', Arial; font-weight: 700;"></i>
+          <span style="font-family: 'Noto Emoji', Arial;font-weight: 700; color: rgba(47, 47, 47, 1);" class="text-[24.0pt]">📚</span>
           <!-- <font-awesome-icon class="text-3xl" :icon="['fas', 'book']" /> -->
           <!-- <span class="font-sans text-3xl">📚</span> -->
         </div>
-        <div class="mt-2 ">
+        <div class="">
           <span style="color: rgba(47, 47, 47, 1);" class="font-bold text-[24.0pt] ">Sites.wiki</span>
         </div>
         <div class="mt-2">
@@ -23,8 +24,8 @@
       </div>
 
       <!-- Content -->
-      <div class="sm:grid sm:grid-cols-2 sm:px-2 mt-10 py-3 w-full flex flex-col justify-center items-center">
-        <div class="sm:w-full w-[276px] top-0" v-for="category in dataCategories" :key="category.id">
+      <div class="sm:grid sm:grid-cols-2 sm:px-2 mt-10 py-3 w-full flex flex-col justify-center items-center ">
+        <div class="sm:w-full w-[276px] top-[-20px]" v-for="category in dataCategories" :key="category.id">
           <div class="border-bottom py-2 sm:w-[75%]">
             <span style="color: rgba(47, 47, 47, 1);" class="leading-8 font-bold text-[14.0pt]">
             {{ category.title }}
@@ -33,7 +34,8 @@
           <div class="py-[14px] px-2">
             <div class="my-3" v-for="item in category.items" :key="item.name">
             <router-link class="text-[14.0pt]" :to="item.url">
-              <font-awesome-icon class="mr-2" :icon="item.icon" />
+              <span style="font-family: 'Noto Emoji', Arial;font-weight: 700;" class=" mr-3"> {{ item.icon }}</span>
+              <!-- <font-awesome-icon  class="mr-2" :icon="item.icon" /> -->
               <span style="color: rgba(28, 28, 28, 1);">{{ item.name }}</span>
             </router-link>
           </div>
@@ -45,6 +47,7 @@
 </template>
 
 <script setup>
+import { icon } from '@fortawesome/fontawesome-svg-core';
 import { ref } from 'vue';
 import { defineProps } from 'vue';
 
@@ -61,16 +64,16 @@ const props = defineProps({
       title: 'Top Wiki Pages',
       items: [
         {
-        name:'Announcements', icon: ['far', 'star'], url:'',
+        name:'Announcements', icon: '⭐️', url:'',
         },
         {
-        name:'Company Directory', icon: ['far', 'gem'], url:'',
+        name:'Company Directory', icon: '💎', url:'',
         },
         {
-        name:'Instant Messaging', icon: ['far', 'comment-dots'], url:'',
+        name:'Instant Messaging', icon: '💬', url:'',
         },
         {
-        name:'Customer Service', icon: ['fas', 'phone'], url:'',
+        name:'Customer Service', icon: '📞', url:'',
         },
     ]
     },
@@ -79,16 +82,16 @@ const props = defineProps({
       title: 'New Employees',
       items: [
         {
-        name:'Onboarding', icon: ['fas', 'person-snowboarding'], url:'',
+        name:'Onboarding', icon: '🏄‍♀️', url:'',
         },
         {
-        name:'Glossary', icon: ['fas', 'book-medical'], url:'',
+        name:'Glossary', icon: '📋', url:'',
         },
         {
-        name:'FAQ', icon: ['fas', 'clipboard-question'], url:'',
+        name:'FAQ', icon: '🌿', url:'',
         },
         {
-        name:'Training', icon: ['far', 'circle'], url:'',
+        name:'Training', icon: '🍊', url:'',
         },
     ]
     },
@@ -97,13 +100,13 @@ const props = defineProps({
       title: 'Extras',
       items: [
         {
-        name:'Scheduling', icon: ['far', 'clock'], url:'',
+        name:'Scheduling', icon: '⌚', url:'',
         },
         {
-        name:'Support', icon: ['fas', 'rainbow'], url:'',
+        name:'Support', icon: '🌈', url:'',
         },
         {
-        name:'Pay Stubs', icon: ['fas', 'truck'], url:'',
+        name:'Pay Stubs', icon: '🎫', url:'',
         },
     ]
     },
@@ -112,13 +115,13 @@ const props = defineProps({
       title: 'News & Updates',
       items: [
         {
-        name:'Employee Feedback', icon: ['far', 'face-smile'], url:'',
+        name:'Employee Feedback', icon: '🥳', url:'',
         },
         {
-        name:'Calendars', icon: ['far', 'calendar'], url:'',
+        name:'Calendars', icon: '🗓', url:'',
         },
         {
-        name:'Health & Safety', icon: ['fas', 'shield'], url:'',
+        name:'Health & Safety', icon: '🌸', url:'',
         },
     ]
     },
@@ -127,16 +130,16 @@ const props = defineProps({
       title: 'Documents',
       items: [
         {
-        name:'HR Forms', icon: ['far', 'folder-open'], url:'',
+        name:'HR Forms', icon: '📁', url:'',
         },
         {
-        name:'Social ', icon: ['far', 'lightbulb'], url:'',
+        name:'Social ', icon: '🔮', url:'',
         },
         {
-        name:'Network', icon: ['fas', 'network-wired'], url:'',
+        name:'Network', icon: '🕸', url:'',
         },
         {
-        name:'Event', icon: ['fas', 'fish'], url:'',
+        name:'Event', icon: '🐠', url:'',
         },
     ]
     },
@@ -145,13 +148,16 @@ const props = defineProps({
       title: 'Social Platforms',
       items: [
         {
-        name:'Professional Dev', icon: ['fas', 'heart'], url:'',
+        name:'Professional Dev', icon: '🖤', url:'',
         },
         {
-        name:'From the CEO', icon: ['fas', 'bullhorn'], url:'',
+        name:'From the CEO', icon: '📣', url:'',
         },
         {
-        name:'Learning System', icon: ['fas', 'sun'], url:'',
+        name:'Learning System', icon: '🌞', url:'',
+        },
+        {
+        name:'', icon: '', url:'',
         },
     ]
     },
